@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>JUNO PMT DB SYSTEM</title>
+    <html>
+    <head lang="en">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <link rel="alternate icon" type="image/png" href="assets/i/juno.png">
+        <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+        <style>
+            .header {
+                text-align: center;
+            }
+            .header h1 {
+                font-size: 200%;
+                color: #333;
+                margin-top: 30px;
+            }
+            .header p {
+                font-size: 14px;
+            }
+        </style>
+    </head>
+<div class="header">
+    <div class="am-g">
+        <img src="assets/i/juno.png">
+        <!--<h1></h1>-->
+        <p>PMT Instrumentation Database System for JUNO<br/>(Online Solution V4.5)</p>
+    </div>
+</div>
+<body leftmargin="0" onload="changeImg()">
+<div class="am-g" id="loginDiv">
+    <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+        <hr>
+        <form method="post" class="am-form" data-am-validator>
+            <label for="username">Username:</label>
+            <div class="am-input-group">
+                <span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span>
+                <input type="text" class="am-form-field" placeholder="Username" id="username" v-model="username" required/>
+            </div>
+            <br>
+            <label for="password">Password:</label>
+            <div class="am-input-group">
+                <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span>
+                <input type="password" class="am-form-field" placeholder="Password" id="password" v-model="password" required/>
+            </div>
+            <br>
+            <label for="vcode">Code:</label>
+            <div>
+                <input type="text" name="" id="vcode" value="" style="width: 50%;" class="am-fl" v-model="pic_code" required/>
+                <span id="code" title="看不清，换一张"></span>
+            </div>
+            <br>
+            <br />
+            <div class="am-cf">
+                <input type="button" value=" Login" class="am-btn am-btn-primary am-btn-sm am-fl" onclick="Login()" />
+                <input type="button" value="Single Sign On" class="am-btn am-btn-default am-btn-sm am-fr" onclick="docdb()">
+            </div>
+        </form>
+
+        <hr>
+        <p>Copyright © 2016-2021 JUNO Team<br />
+            Questions and Comments to wangj443@mail2.sysu.edu.cn <br />
+            Jiangmen Underground Neutrino Observatory：lixn@ihep.ac.cn<br /></p>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<!--<script src="assets/js/config.js"></script>
+<script src="assets/js/vue.min.js"></script>
+<script src="assets/layer/layer.js"></script>-->
+<script>
+    $(function() {
+        var code = 9999;
+        function codes(){
+
+            var ranColor = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6); //随机生成颜色
+            // alert(ranColor)
+            var ranColor2 = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            c = num1 + num2;
+
+            $("#code").html(num1 + "+" + num2 + "=?");
+            if ($("#code").hasClass("nocode")) {
+                $("#code").removeClass("nocode");
+                $("#code").addClass("code");
+
+            }
+            $("#code").css('background',ranColor);
+            $("#code").css('color',ranColor2);
+
+        }
+        codes()
+
+        $("#code").on('click',codes)
+
+
+    });
+function Login(){
+        var v= document.getElementById("vcode").value;
+        //alert(c);
+        if (v == c && code != 9999) {
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            $.ajax({
+                url:'backend/login.php',
+                dataType:'json',
+                type:'POST',
+                data:{'U':username,'P':password},
+                success: function(json) {
+                    var list =json.list;
+                    $.each(list, function (index, array) {
+                        var SYSU=array['SYSU'];
+                        if (SYSU==4){
+                            window.location.href="Home.html";
+                        }
+                        else if(SYSU==2){
+                            alert("Login failed!The username or password is wrong");
+                        }
+                        else if(SYSU==1)
+                        {
+                            alert("Link Failed!");
+                        }
+
+
+                    });
+                            },
+                error: function () {
+                    alert("Login failed!unknown Error!");}
+            })
+
+        } else {
+            alert("You entried a wrong verification code!");
+        }
+}
+    function docdb(){
+        alert("Now we don't support DocDB account to login our database!");
+    }
+
+</script>
+</body>
+</html>

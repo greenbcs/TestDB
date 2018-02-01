@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Users</title>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" media="all">
+</head>
+<body>
+<div class="am-g am-padding">
+    <form class="am-form" action="backend/modify_pmtuser.php" onsubmit="return toVaild()" method="post">
+        <label for="NO">NO:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-navicon am-icon-fw"></i></span>
+            <input type="NO" class="am-form-field" placeholder="NO" id="NO" autocomplete="off" name="NO" readonly onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="username">Username:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Username" autocomplete="off" id="username" name="username" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="email">Email:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-envelope am-icon-fw"></i></span>
+            <input type="email" class="am-form-field" placeholder="Email" id="email" autocomplete="off" v-model="email" name="email" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="unit">Unit:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-university am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Unit" id="unit" autocomplete="off" v-model="unit" name="unit" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <div class="am-form-group">
+            <label for="doc-select-1">Level:</label>
+            <select id="doc-select-1" name="role" >
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <!-- <option value="role_4">4</option>-->
+            </select>
+            <span class="am-form-caret"></span>
+        </div>
+        <div class="am-u-sm-12 am-fr" style="left: 10%;">
+            <input type="submit" class="am-btn am-btn-primary" value="Modify">
+            <input type="BUTTON" class="am-btn am-btn-primary" value="Cancel" onClick="window.close()">
+            <p></p>
+        </div>
+    </form>
+</div>
+<input type="hidden" name="DBSlevel" id="DBSlevel" value="3">
+<script src="assets/js/junocheck.js"></script>
+<script>
+    var addstr= document.URL;
+    //var newaddstr=addstr.replace('%20', ' ');
+    var strs=new Array();
+    strs=addstr.split("?");
+    document.getElementById("NO").value=strs[1];
+    document.getElementById("username").value=strs[2].replace(/\%20/g, ' ');
+    document.getElementById("email").value=strs[3];
+    document.getElementById("unit").value=strs[4].replace(/\%20/g, ' ');
+    document.getElementById("doc-select-1").value=strs[5];
+    function toVaild(){
+        var val1 = document.getElementById("username").value;
+        var val2 = document.getElementById("NO").value;
+        var val4 = document.getElementById("email").value;
+        var val5 = document.getElementById("unit").value;
+        //允许入库备注置空
+        //alert(val);
+        if(val1 == ""||val2==""||val4==""||val5==""){
+            alert("Something is empty!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

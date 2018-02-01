@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Words</title>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" media="all">
+</head>
+<body>
+<div class="am-g am-padding">
+    <form class="am-form" action="backend/modifyword.php" onsubmit="return toVaild()" method="post">
+        <label for="logogram">Logogram:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-text-width am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Logogram" autocomplete="off" id="logogram" name="logogram" readonly onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br/>
+        <label for="english">English:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="English" autocomplete="off" id="english" name="english" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br/>
+        <label for="chinese">Chinese:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Chinese" autocomplete="off" id="chinese" name="chinese" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="paraphrase">Paraphrase:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-wikipedia-w am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Paraphrase" id="paraphrase" autocomplete="off"  name="paraphrase" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <div class="am-u-sm-12 am-fr" style="left: 10%;">
+            <input type="submit" class="am-btn am-btn-primary" value="Modify">
+            <input type="BUTTON" class="am-btn am-btn-primary" value="Cancel" onClick="window.close()">
+            <p></p>
+        </div>
+    </form>
+    <input type="hidden" name="DBSlevel" id="DBSlevel" value="3">
+</div>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<!--
+<script src="assets/js/app.js"></script>
+<script src="assets/js/config.js"></script>-->
+<script src="assets/js/vue.min.js"></script>
+<script src="assets/layer/layer.js"></script>
+<script src="assets/js/junocheck.js"></script>
+<script src="assets/js/Logout.js"></script>
+<script src="assets/datepicker/WdatePicker.js"></script>
+<script src="assets/js/public.js"></script>
+
+<script>
+    var DBSgrade = document.getElementById("DBSlevel").value;
+    if(myParames2<DBSgrade){window.close();};
+    var addstr= document.URL;
+    //var newaddstr=addstr.replace('%20', ' ');
+    var strs=new Array();
+    strs=addstr.split("?");
+    //document.getElementById("NO").value=strs[1];
+    document.getElementById("logogram").value=strs[2].replace(/\%20/g, ' ');
+    document.getElementById("english").value=strs[3].replace(/\%20/g, ' ');
+    document.getElementById("chinese").value=decodeURIComponent(strs[4].replace(/\+/g,  " "));
+    document.getElementById("paraphrase").value=decodeURIComponent(strs[5].replace(/\+/g,  " "));
+    function toVaild(){
+        var val1 = document.getElementById("logogram").value;
+        var val2 = document.getElementById("english").value;
+        var val3 = document.getElementById("chinese").value;
+        var val4 = document.getElementById("paraphrase").value;
+        //允许入库备注置空
+        //alert(val);
+        if(val1 == ""||val2==""||val3==""||val4==""){
+            alert("Something is empty!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

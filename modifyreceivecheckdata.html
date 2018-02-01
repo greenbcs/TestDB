@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Words</title>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" media="all">
+</head>
+<body>
+<div class="am-g am-padding">
+    <form class="am-form" action="backend/modifyreceivecheckdata.php" onsubmit="return toVaild()" method="post">
+        <label for="NO">NO:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-text-width am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Index" autocomplete="off" id="NO" name="NO" readonly onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br/>
+        <label for="SN">SN:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Serail Number" autocomplete="off" id="SN" name="SN" onkeyup="OnPropChanged()" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br/>
+        <label for="WHR">WHR:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Warehousing Recorder" autocomplete="off" id="WHR" name="WHR" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="RD">RD:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Receive Date" id="RD" autocomplete="off"  name="RD" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="MF">MF:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Manufacture" id="MF" autocomplete="off"  name="MF" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="Type">Type:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Type" id="Type" autocomplete="off"  name="Type" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="PD">PD:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Product Date" id="PD" autocomplete="off"  name="PD" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="BA">BA:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Box Appearance" id="BA" autocomplete="off"  name="BA" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="WHN">WHN:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-font am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Warehousing Note" id="WHN" autocomplete="off"  name="WHN" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <div class="am-u-sm-12 am-fr" style="left: 10%;">
+            <input type="submit" class="am-btn am-btn-primary" value="Modify">
+            <input type="BUTTON" class="am-btn am-btn-primary" value="Cancel" onClick="window.close()">
+            <p></p>
+        </div>
+    </form>
+    <input type="hidden" name="DBSlevel" id="DBSlevel" value="2">
+</div>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<!--
+<script src="assets/js/app.js"></script>
+<script src="assets/js/config.js"></script>-->
+<script src="assets/js/vue.min.js"></script>
+<script src="assets/layer/layer.js"></script>
+<script src="assets/js/junocheck.js"></script>
+<script src="assets/js/Logout.js"></script>
+<script src="assets/datepicker/WdatePicker.js"></script>
+<script src="assets/js/public.js"></script>
+
+<script>
+        var DBSgrade = document.getElementById("DBSlevel").value;
+        if(myParames2<DBSgrade){window.close();};
+    var addstr= document.URL;
+    //var newaddstr=addstr.replace('%20', ' ');
+    var strs=new Array();
+    strs=addstr.split("?");
+    document.getElementById("NO").value=strs[1].replace(/\%20/g, ' ');;
+    document.getElementById("SN").value=strs[2].replace(/\%20/g, ' ');
+    document.getElementById("WHR").value=strs[3].replace(/\%20/g, ' ');
+    document.getElementById("RD").value=decodeURIComponent(strs[4].replace(/\+/g,  " "));
+    document.getElementById("MF").value=decodeURIComponent(strs[5].replace(/\+/g,  " "));
+    document.getElementById("Type").value=decodeURIComponent(strs[6].replace(/\+/g,  " "));
+    document.getElementById("PD").value=decodeURIComponent(strs[7].replace(/\+/g,  " "));
+    document.getElementById("BA").value=decodeURIComponent(strs[8].replace(/\+/g,  " "));
+    document.getElementById("WHN").value=decodeURIComponent(strs[9].replace(/\+/g,  " "));
+    function toVaild(){
+        var val1 = document.getElementById("SN").value;
+        var val2 = document.getElementById("WHR").value;
+        var val3 = document.getElementById("RD").value;
+        var val4 = document.getElementById("MF").value;
+        var val5 = document.getElementById("Type").value;
+        var val6 = document.getElementById("PD").value;
+        var val7 = document.getElementById("BA").value;
+        //允许入库备注置空
+        //alert(val);
+        if(val1 == ""||val2==""||val3==""||val4==""||val5==""||val6==""||val7==""){
+            alert("Something is empty!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    function OnPropChanged() {
+
+        var a = document.getElementById("SN").value;
+        var result0 = a.indexOf('EA');
+        var result1 = a.indexOf('PA');
+        var result3= a.indexOf('-');
+        if(result0==0)//返回0说明处于EA左边第0未,即本身
+        {
+            document.getElementById("MF").value = 'Hamamatsu';
+            document.getElementById("Type").value= 'R12860-50';
+
+        }
+        if(result1==0)//返回0说明处于PA左边第0未,即本身
+        {
+            document.getElementById("MF").value = 'NNVT';
+            document.getElementById("Type").value= 'GDB-6201';
+
+        }
+        if(result3==6){
+
+            document.getElementById("PD").value="20"+ a.substring(2,4)+'-'+a.substring(4,6);
+        }}
+</script>
+</body>
+</html>

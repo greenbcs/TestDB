@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Users</title>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" media="all">
+</head>
+<body>
+<div class="am-g am-padding">
+    <form class="am-form" action="backend/adduser.php" onsubmit="return toVaild()" method="post">
+        <label for="username">Username:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Username" autocomplete="off" id="username" name="username" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br/>
+        <label for="password">Passwords:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span>
+            <input type="password" class="am-form-field" placeholder="Password" autocomplete="off" id="password" name="password" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br/>
+        <label for="confirm_pwd">Confirm Passwords:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span>
+            <input type="password" class="am-form-field" placeholder="Password" autocomplete="off" id="confirm_pwd" v-model="confirm_password" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="email">Email:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-envelope am-icon-fw"></i></span>
+            <input type="email" class="am-form-field" placeholder="Email" id="email" autocomplete="off" v-model="email" name="email" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <label for="unit">Institution:</label>
+        <div class="am-input-group">
+            <span class="am-input-group-label"><i class="am-icon-university am-icon-fw"></i></span>
+            <input type="text" class="am-form-field" placeholder="Institution" id="unit" autocomplete="off" v-model="unit" name="unit" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+        </div>
+        <br>
+        <div class="am-form-group">
+            <label for="doc-select-1">Level:</label>
+            <select id="doc-select-1" name="role" >
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+               <!-- <option value="role_4">4</option>-->
+            </select>
+            <span class="am-form-caret"></span>
+        </div>
+        <div class="am-u-sm-12 am-fr" style="left: 10%;">
+            <input type="submit" class="am-btn am-btn-primary" value="Add New User">
+            <input type="BUTTON" class="am-btn am-btn-primary" value="Cancel" onClick="window.close()">
+            <p></p>
+        </div>
+    </form>
+    <input type="hidden" name="DBSlevel" id="DBSlevel" value="3">
+</div>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<!--
+<script src="assets/js/app.js"></script>
+<script src="assets/js/config.js"></script>-->
+<script src="assets/js/vue.min.js"></script>
+<script src="assets/layer/layer.js"></script>
+<script src="assets/js/junocheck.js"></script>
+<script src="assets/js/Logout.js"></script>
+<script src="assets/datepicker/WdatePicker.js"></script>
+<script src="assets/js/public.js"></script>
+
+<script>
+    var DBSgrade = document.getElementById("DBSlevel").value;
+    if(myParames2<DBSgrade){window.close();};
+    function toVaild(){
+        var val1 = document.getElementById("username").value;
+        var val2 = document.getElementById("password").value;
+        var val3 = document.getElementById("confirm_pwd").value;
+        var val4 = document.getElementById("email").value;
+        var val5 = document.getElementById("unit").value;
+        //允许入库备注置空
+        //alert(val);
+        if(val1 == ""||val2==""||val3==""||val4==""||val5==""){
+            alert("Something is empty!");
+            return false;
+        }
+        else{
+            if (val2==val3)
+            //alert("ok");
+            {
+            return true;}
+            else
+            {
+                alert("Two Passwords is different!");
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
