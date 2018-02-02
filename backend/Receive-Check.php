@@ -31,15 +31,19 @@ if($junoL23=="2"|$junoL23=="3") {
    if (!mysqli_query($conn, $sql)) {
       die('Error: ' . mysqli_error($conn));
    } else {
-      $checkpmtindatabase1=mysqli_query($conn,"select * from hamamatsudbt where SN='$SN'");
-      $checkpmtindatabase2=mysqli_query($conn,"select * from nnvtdbt where SN='$SN'");
-      while ($row1 = mysqli_fetch_array($checkpmtindatabase1)) {
+      if (strpos($SN,'EA')>=0)
+      {
+         $checkpmtindatabase=mysqli_query($conn,"select * from hamamatsudbt where SN='$SN'");
+      }else{
+         $checkpmtindatabase=mysqli_query($conn,"select * from nnvtdbt where SN='$SN'");
+      }
+
+
+      while ($row1 = mysqli_fetch_array($checkpmtindatabase)) {
          $NO1=$row1['NO'];
       }
-      while ($row2= mysqli_fetch_array($checkpmtindatabase2)) {
-         $NO1=$row2['NO'];
-      }
-       if($NO1==""&$NO2==""){
+
+       if($NO1==""){
            print "<script>alert('Notice: This PMT not exist in Original data table,PLease record it!(厂家原始数据中没有这支PMT，请记录下来！) ');</script>";
        }
 

@@ -101,3 +101,142 @@
 </table>
 </body>
 </html>
+
+
+
+
+
+<div class="admin-content">
+    <div class="admin-content-body">
+        <div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Upload Manufacturers' Original Data</strong></div>
+        </div>
+        <p></p>
+        <div class="am-u-sm-12 am-u-md-11 am-u-md-1">
+            <div class="am-panel am-panel-default">
+                <div class="am-panel-bd">
+                    <div class="am-g">
+                        <div class="am-u-md-4">
+                            <img class="am-img-circle am-img-thumbnail" src="assets/i/jiamingcentre.jpg" alt=""/>
+                        </div>
+                        <div class="am-u-md-8">
+                            <p>Here for the PMTs' original data of Hamamatsu Company  </p>
+                            <form class="am-form" method="post" enctype="multipart/form-data" onsubmit="return toVaild1()" action="backend/uploadexcel.php">
+                                <div class="am-form-group">
+                                    <input type="text" name="batch1" id="batch1" placeholder="Batch Number (This must be filled in the batch number，这个必须要如实填入批次数字)" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+                                    <p></p>
+                                    <input type="text" name="shippingdate1" id="shippingdate1" placeholder="Transport Date (这个必须要如实填入该批次Transport，格式如：2017-11-07)" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+                                    <p></p>
+                                    <input type="file" id="HExcel" name="HExcel">
+                                    <input type="hidden" name="leadExcel" value="true">
+                                    <p class="am-form-help">Please choose XLSX file...</p>
+                                    <input type="submit" class="am-btn am-btn-primary am-btn-xs" name="HAMAMATSU" value="Submit for Hamamatsu"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-panel am-panel-default">
+                <div class="am-panel-bd">
+                    <div class="am-g">
+                        <div class="am-u-md-4">
+                            <img class="am-img-circle am-img-thumbnail" src="assets/i/NNVTcenter.jpg" alt=""/>
+                        </div>
+                        <div class="am-u-md-8">
+                            <p>Here for the PMTs' original data of NNVT Company </p>
+                            <form class="am-form" method="post" enctype="multipart/form-data" onsubmit="return toVaild2()" action="backend/uploadexcel1.php">
+                                <div class="am-form-group">
+                                    <input type="text" name="batch2" id="batch2" placeholder="Batch Number (This must be filled in the batch number，这个必须要如实填入批次数字)" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+                                    <p></p>
+                                    <input type="text" name="shippingdate2" id="shippingdate2" placeholder="Transport Date (这个必须要如实填入该批次Transport Date，格式如：2017-11-07)" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+                                    <p></p>
+                                    <input type="file" id="NNVTExcel" name="NNVTExcel">
+                                    <input type="hidden" name="leadExcelNNVT" value="true">
+                                    <p class="am-form-help">Please choose XLSX file...</p>
+                                    <input type="submit" class="am-btn am-btn-primary am-btn-xs" name="NNVT" value="Submit for NNVT"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <input type="hidden" name="DBSlevel" id="DBSlevel" value="2">
+    <footer class="admin-content-footer">
+        <hr>
+        <p class="am-padding-left" style="text-align: center;">© 2016-2021 JUNO Team.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions and Comments to wangj443@mail2.sysu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address: No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China</p>
+    </footer>
+</div>
+<!-- content end -->
+</div>
+
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<!--
+<script src="assets/js/app.js"></script>
+<script src="assets/js/config.js"></script>-->
+<script src="assets/js/vue.min.js"></script>
+<script src="assets/layer/layer.js"></script>
+<script src="assets/datepicker/WdatePicker.js"></script>
+<script src="assets/js/public.js"></script>
+<script src="assets/js/junocheck.js"></script>
+<script src="assets/js/Logout.js"></script>
+<script>
+    $.ajax({
+
+        url:'backend/NOTICE.php',
+        dataType:'text',
+        type:'POST',
+        //data:{'SN':a},
+        success: function(json) {
+            document.getElementById("notice").value=json;
+        }
+
+    })
+
+    function toVaild1(){
+        var val1 = document.getElementById("batch1").value;
+        var val12 = document.getElementById("shippingdate1").value;
+        //alert(val);
+        if(val1 == ""||val12 == ""){
+            alert("Batch Number or Shipping Date is empty!");
+            return false;
+        }
+        else{
+            //alert("ok");
+            return true;
+        }
+    }
+
+    function toVaild2(){
+        var val2 = document.getElementById("batch2").value;
+        var val22 = document.getElementById("shippingdate2").value;
+        //alert(val);
+        if(val2 == ""||val22 == ""){
+            alert("Batch Number or Shipping Date is empty!");
+            return false;
+        }
+        else{
+            //alert("ok");
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

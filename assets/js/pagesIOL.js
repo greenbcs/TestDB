@@ -21,7 +21,7 @@ function getData(page)
             curPage = page; //当前页
             totalPage = json.totalPage; //总页数
             var table_html = "";
-            table_html += "<table class=\"am-table am-table-striped am-table-hover table-main\"><tr><th width=\"10\">NO</th><th width=\"60\">Username</th><th width=\"60\">Level</th><th width=\"60\">Operation Time</th><th width=\"60\">Login IP</th><th width=\"60\">Illegal Operation(EN)</th></tr>";
+            table_html += "<table class=\"am-table am-table-compact am-text-nowrap am-table-striped am-table-hover table-main\"><tr><th width=\"10\">NO</th><th width=\"60\">Username</th><th width=\"60\">Level</th><th width=\"60\">Operation Time</th><th width=\"60\">Login IP</th><th width=\"60\">Illegal Operation(EN)</th></tr>";
             var list = json.list;
             $.each(list, function (index, array) { //遍历json数据列
                 // if(array['ID'].length > 28){

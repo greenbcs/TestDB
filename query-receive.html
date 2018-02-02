@@ -9,11 +9,11 @@
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" type="image/png" href="assets/i/juno.png">
     <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" >
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/admin.css">
     <style>
         .am-align-left p{
@@ -30,238 +30,63 @@
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
     以获得更好的体验！</p>
 <![endif]-->
-
-<header class="am-topbar am-topbar-inverse admin-header">
-    <div class="am-topbar-brand" style="color: white;">
-        <a href="Home.html"/><img src="assets/i/logo_s.png" /><strong>PMT Instrumentation Database System for JUNO</strong> <small>(Online Solution V4.5)</small>
-    </div>
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
-
-    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
-
-        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-            <li class="am-dropdown" data-am-dropdown>
-                <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                    <span class="am-icon-users"></span>Hi,JUNO<span class="am-icon-caret-down"></span>
-                </a>
-                <ul class="am-dropdown-content">
-                    <li><a href="Illegal-Operation-Logs.html"><span class="am-icon-list-alt"></span> Illegal-Operation-Logs</a></li>
-                    <li><a href="admin-sets.html"><span class="am-icon-cog"></span> Set</a></li>
-                    <li><a onclick="logout()"><span class="am-icon-sign-out"></span> Logout</a></li>
-                </ul>
-            </li>
-            <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">Full Screen</span></a></li>
-        </ul>
-    </div>
-</header>
-
-<div class="am-cf admin-main">
-    <!-- sidebar start -->
-    <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
-        <div class="am-offcanvas-bar admin-offcanvas-bar">
-            <ul class="am-list admin-sidebar-list">
-
-                <li><a href="Home.html"><span class="am-icon-home"></span> Introduction to JUNO</a></li>
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-R'}"><span class="am-icon-keyboard-o"></span> Recording <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-R"><!-- 默认展开添加class am-in-->
-                        <li><a href="upload-manufactuers-original-data.html" class="am-cf"><span class="am-icon-upload"></span> Upload Manufacturers Original Data<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
-                        <!-- <li><a href="warehousing.html"><span class="am-icon-laptop"></span> Warehousing</a></li>-->
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-W'}"><span class="am-icon-laptop"></span> Warehousing <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-W"><!-- 默认展开添加class am-in-->
-                                <li><a href="receive-check.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Check</a></li>
-                                <li><a href="PMTs-storage.html" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage</a></li>
-                            </ul></li>
-                        <li><a href="surface-geometry.html" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry</a></li>
-                        <li><a href="acceptance-test.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test</a></li>
-                        <li><a href="potting.html"><span class="am-icon-th"></span> Potting</a></li>
-
-                    </ul>
-                </li>
-
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Q'}"><span class="am-icon-database"></span> Query<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-Q"><!-- 默认展开添加class am-in-->
-
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-HNOD'}"><span class="am-icon-university"></span> Manufactures Data<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-HNOD"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-Hamamatsu.html" class="am-cf"><span class="am-icon-check-square"></span> Hamamatsu Data</a></li>
-                                <li><a href="query-NNVT.html" class="am-cf"><span class="am-icon-check-square"></span> NNVT Data</a></li>
-                            </ul></li>
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-QW'}"><span class="am-icon-laptop"></span> Warehouse Records <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-QW"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-receive.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Data</a></li>
-                                <li><a href="query-storage.html" class="am-cf"><span class="am-icon-tree"></span> Storage Data </a></li>
-                            </ul></li>
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-SGD'}"><span class="am-icon-cubes"></span> Surface & Geometry Data <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-SGD"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-surface-geometry.html" class="am-cf"><span class="am-icon-file-text-o"></span> Surface & Geometry original Data</a></li>
-                                <li><a href="query-surface-geometry-statistics.html" class="am-cf"><span class="am-icon-columns"></span> Surface & Geometry statistics Data</a></li>
-                            </ul></li>
-                        <li><a href="query-sampling-scan-station.html" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>
-                        <li><a href="query-acceptance-test.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Data</a></li>
-
-                    </ul>
-
-                <li><a href="QRcode.html"><span class="am-icon-qrcode"></span> Make QR code</a></li>
-
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Mapping'}"><span class="am-icon-line-chart"></span> Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-Mapping"><!-- 默认展开添加class am-in-->
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-MM'}"><span class="am-icon-laptop"></span> Manufactures Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-MM"><!-- 默认展开添加class am-in-->
-                                <li><a href="Hamamatsu-Origin-Data-Mapping.html" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Mapping </a></li>
-                                <li><a href="NNVT-Origin-Data-Mapping.html" class="am-cf"><span class="am-icon-university"></span> NNVT Mapping </a></li>
-                            </ul></li>
-
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-WM'}"><span class="am-icon-laptop"></span> Warehousing Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-WM"><!-- 默认展开添加class am-in-->
-                                <li><a href="receive-check-mapping.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Check Mapping </a></li>
-                                <li><a href="PMTs-storage-mapping.html" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage Mapping</a></li>
-                            </ul></li>
-
-                        <li><a href="surface-geometry-mapping.html" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry Mapping </a></li>
-                        <li><a href="container1-test-mapping.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Mapping </a></li>
-                        <li><a href="sampling-scan-station-mapping.html"><span class="am-icon-star"></span> Sampling Scan Station Mapping <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
-                        <li><a href="potting-mapping.html"><span class="am-icon-th"></span> Potting Mapping</a></li>
-
-                    </ul>
-                </li>
-
-
-
-                <li><a href="dictionary.html"><span class="am-icon-book"></span> Data Dictionary</a></li>
-                <li><a href="download.html"><span class="am-icon-download"></span> Download Database</a></li>
-                <li><a href="management.html"><span class="am-icon-group"></span> Management</a></li>
-                <!--<li><a href="admin-logs.html"><span class="am-icon-paw"></span> System Logs</a></li>-->
-                <li><a href="profiles.html"><span class="am-icon-user"></span> Profiles</a></li>
-                <li><a href="Login-Logs.html"><span class="am-icon-paw"></span> Login Logs</a></li>
-            </ul>
-
-            <div class="am-panel am-panel-default admin-sidebar-panel">
-                <div class="am-panel-bd ">
-                    <p><span class="am-icon-bookmark"></span> Notice</p>
-                    <!--<p>This is V4.0 database system!</p>-->
-
-                    <textarea style="border:0;" class="" rows="3" cols="18"  name="notice" id="notice" readonly></textarea>
-                    <!-- <small>250字以内写出你的一生...</small>-->
-
-                </div>
-            </div>
-
-            <div class="am-panel am-panel-default admin-sidebar-panel">
-                <div class="am-panel-bd">
-                    <p><span class="am-icon-link"></span> Link</p>
-                    <p><a href="http://juno.ihep.ac.cn:8099/PMTtest/">PMT Testing Elog</a></p>
-                    <p><a href="http://idp.ihep.ac.cn/idp/Authn/UserPassword">IHEP DocDB</a></p>
-                    <p><a href="http://www.ihep.cas.cn/dkxzz/juno/">JUNO Homepage</a></p>
-                    <p><a href="http://juno.ihep.ac.cn/mediawiki/index.php/Main_Page">JUNO Wiki</a></p>
-                </div>
+<!--from here-->
+<div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg"> The receive check Data of Warehousing </strong></div>
+</div>
+<!--from here-->
+<p></p>
+<div class="am-g">
+    <!-- <div class="am-u-sm-12 am-u-md-6">
+         <div class="am-form-group">
+             <input type="hidden" name="CK" id="ck" value="true">
+             <select data-am-selected="{btnSize: 'sm'}" name="optionorder" id="OPTION" onchange="bao(this.options[this.options.selectedIndex].value)">
+                 <option value="option1"> Descend Order </option>
+                 <option value="option2"> Ascend Order </option>
+             </select>
+         </div>
+     </div>-->
+    <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-btn-toolbar">
+            <div class="am-btn-group am-btn-group-xs">
+                <!--<input type="hidden" name="CK" id="CK" value="true" method="post">-->
+                <!-- <input type="button" id="plotqrcode" class="am-btn am-btn-primary" value="Make" onclick="DescendOrder()">
+               <input type="button" id="refreshqrcode" class="am-btn am-btn-primary" value="Refresh" onclick="refreshqrcode()">-->
+                <button type="button" class="am-btn am-btn-default" onclick="DescendOrder()"><span class="am-icon-arrow-down"></span> Descend Order </button>
+                <button type="button" class="am-btn am-btn-default" onclick="AscendOrder()"><span class="am-icon-arrow-up"></span> Ascend Order </button>
             </div>
         </div>
     </div>
-    <!-- sidebar end -->
-
-
-    <!-- content start -->
-
-    <div class="admin-content">
-        <div class="admin-content-body">
-            <div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
-                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg"> The receive check Data of Warehousing </strong></div>
-            </div>
-            <!--from here-->
-            <p></p>
-            <div class="am-g">
-                <!-- <div class="am-u-sm-12 am-u-md-6">
-                     <div class="am-form-group">
-                         <input type="hidden" name="CK" id="ck" value="true">
-                         <select data-am-selected="{btnSize: 'sm'}" name="optionorder" id="OPTION" onchange="bao(this.options[this.options.selectedIndex].value)">
-                             <option value="option1"> Descend Order </option>
-                             <option value="option2"> Ascend Order </option>
-                         </select>
-                     </div>
-                 </div>-->
-                <div class="am-u-sm-12 am-u-md-6">
-                    <div class="am-btn-toolbar">
-                        <div class="am-btn-group am-btn-group-xs">
-                            <!--<input type="hidden" name="CK" id="CK" value="true" method="post">-->
-                            <!-- <input type="button" id="plotqrcode" class="am-btn am-btn-primary" value="Make" onclick="DescendOrder()">
-                           <input type="button" id="refreshqrcode" class="am-btn am-btn-primary" value="Refresh" onclick="refreshqrcode()">-->
-                            <button type="button" class="am-btn am-btn-default" onclick="DescendOrder()"><span class="am-icon-arrow-down"></span> Descend Order </button>
-                            <button type="button" class="am-btn am-btn-default" onclick="AscendOrder()"><span class="am-icon-arrow-up"></span> Ascend Order </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- <textarea id=txt></textarea>-->
-                <div class="am-u-sm-12 am-u-md-3">
-                    <div class="am-input-group am-input-group-sm">
-                        <input type="text" class="am-form-field" placeholder="Input SN..." name="SN" id="SN">
+    <!-- <textarea id=txt></textarea>-->
+    <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+            <input type="text" class="am-form-field" placeholder="Input SN..." name="SN" id="SN">
           <span class="am-input-group-btn">
             <button class="am-btn am-btn-default" type="button" onclick="SYSUPMT()"><span class="am-icon-search" ></span>Search</button>
           </span>
-                    </div>
-                </div>
-            </div>
-
-            <div id="tablelist">
-                <!-- ajax会填充表格代码 -->
-                <ul></ul>
-            </div>
-            <div id="pagecount"></div>
-            <!--end here-->
         </div>
-
-        <input type="hidden" name="DBSlevel" id="DBSlevel" value="1">
-        <footer class="admin-content-footer">
-            <hr>
-            <p class="am-padding-left" style="text-align: center;">© 2016-2021 JUNO Team.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions and Comments to wangj443@mail2.sysu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address: No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China</p>
-        </footer>
     </div>
-    <!-- content end -->
 </div>
 
-<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+<div id="tablelist">
+    <!-- ajax会填充表格代码 -->
+    <ul></ul>
+</div>
+<div id="pagecount"></div>
 
+
+<input type="hidden" name="DBSlevel" id="DBSlevel" value="1">
+
+<!--end here-->
 
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
+<!--[endif]-->
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.cookie.js"></script>
-<!--<![endif]-->
-<script src="assets/js/amazeui.min.js"></script>
-<!--<script type="text/javascript" src="assets/js/jquery-2.1.0.js" ></script>-->
-<!--
-<script src="assets/js/app.js"></script>
-<script src="assets/js/config.js"></script>-->
-<script src="assets/js/vue.min.js"></script>
-<script src="assets/layer/layer.js"></script>
-<script src="assets/datepicker/WdatePicker.js"></script>
-<script src="assets/js/public.js"></script>
 <script src="assets/js/junocheck.js"></script>
-<script src="assets/js/Logout.js"></script>
 <script src="./assets/js/pagesreceivecheck.js"></script>
-<script language="javascript">
-
-    $.ajax({
-
-        url:'backend/NOTICE.php',
-        dataType:'text',
-        type:'POST',
-        //data:{'SN':a},
-        success: function(json) {
-            document.getElementById("notice").value=json;
-        }
-
-    })
-
+<script>
 
 
 </script>

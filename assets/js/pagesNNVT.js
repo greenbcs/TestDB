@@ -12,7 +12,7 @@ function getData(page)
         data: {'pageNum': page - 1,"SN":sn,'FG':fg},
         dataType: 'json',
         beforeSend: function () {
-            $("#tablelist ").append("<h3>loading...</h3>");
+            $("#tablelist").append("<h3>loading...</h3>");
         },
         success: function (json) {
             $("#tablelist").empty();
@@ -21,7 +21,7 @@ function getData(page)
             curPage = page; //当前页
             totalPage = json.totalPage; //总页数
             var table_html = "";
-            table_html += "<table class=\"am-table am-table-striped am-table-hover table-main\"><tr><th width=\"*\">NO</th><th width=\"*\">CD</th><th width=\"*\">SN</th><th width=\"*\">NQE</th><th width=\"*\">HV</th><th width=\"*\">G</th><th width=\"*\">PvsV</th><th width=\"*\">R</th><th width=\"*\">DE</th><th width=\"*\">DR</th><th width=\"*\">TTS</th><th width=\"*\">PP</th><th width=\"*\">AP</th><th width=\"*\">NL</th><th width=\"*\">RT</th><th width=\"*\">FT</th><th width=\"*\">VS</th><th width=\"*\">BN</th><th width=\"*\">Transport Date</th></tr>";
+            table_html += "<table class=\"am-table am-table-striped am-table-hover table-main\"><tr><th width=\"*\">NO</th><th width=\"*\">CD</th><th width=\"*\">SN</th><th width=\"*\">NQE</th><th width=\"*\">HV</th><th width=\"*\">G</th><th width=\"*\">PvsV</th><th width=\"*\">R</th><th width=\"*\">DE</th><th width=\"*\">DR</th><th width=\"*\">TTS</th><th width=\"*\">PP</th><th width=\"*\">AP</th><th width=\"*\">NL</th><th width=\"*\">RT</th><th width=\"*\">FT</th><th width=\"*\">VS</th><th width=\"*\">BR1</th><th width=\"*\">BR2</th><th width=\"*\">BN</th><th width=\"*\">Transport Date</th></tr>";
             var list = json.list;
             $.each(list, function (index, array) { //遍历json数据列
                 // if(array['ID'].length > 28){
@@ -29,7 +29,7 @@ function getData(page)
                 //  }
                 //  else
                 var title_sub = array['NO'];
-                table_html += "<tr><td>" + title_sub + "</td><td>" + array['CD'] + "</td><td>" + array['SN'] + "</td><td>" + array['NQE'] + "</td><td>" + array['HV'] + "</td><td>" + array['G'] + "</td><td>" + array['PvsV'] + "</td><td>" + array['R'] + "</td><td>" + array['DE'] + "</td><td>" + array['DR'] + "</td><td>" + array['TTS'] + "</td><td>" + array['PP'] + "</td><td>" + array['AP'] + "</td><td>" + array['NL'] + "</td><td>" + array['RT'] + "</td><td>" + array['FT'] + "</td><td>" + array['VS'] + "</td><td>" + array['BN'] + "</td><td>" + array['TransportDate'] + "</td><tr>";
+                table_html += "<tr><td>" + title_sub + "</td><td>" + array['CD'] + "</td><td>" + array['SN'] + "</td><td>" + array['NQE'] + "</td><td>" + array['HV'] + "</td><td>" + array['G'] + "</td><td>" + array['PvsV'] + "</td><td>" + array['R'] + "</td><td>" + array['DE'] + "</td><td>" + array['DR'] + "</td><td>" + array['TTS'] + "</td><td>" + array['PP'] + "</td><td>" + array['AP'] + "</td><td>" + array['NL'] + "</td><td>" + array['RT'] + "</td><td>" + array['FT'] + "</td><td>" + array['VS'] + "</td><td>" + array['BR1'] + "</td><td>" + array['BR2'] + "</td><td>" + array['BN'] + "</td><td>" + array['TransportDate'] + "</td><tr>";
             });
             table_html += "</table>";
             $("#tablelist").append(table_html);

@@ -2,7 +2,7 @@
 header("Content-Type: text/html; charset=UTF-8");
 $salt = "IhEP0527";
 $sysupassword="aust4380";
-$sysupassword1="aust438010";
+$sysupassword1="JUNO2018";
 $a= generateHashWithSalt($sysupassword1);
 function generateHashWithSalt($password) {
     //$intermediateSalt = md5(uniqid(rand(), true));

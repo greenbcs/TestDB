@@ -1,4 +1,5 @@
 function logout(){
+    //$.cookie('cookielink',null,{expires:-1,path: '/'});
     var askdelivercode="IHEPSYSUPANASIA";
     $.ajax({
         url: "backend/Logout.php",  // 后台地址
@@ -6,13 +7,16 @@ function logout(){
         dataType:"json",
         data:{'ADC':askdelivercode},  //自己需要传递的数据 {}
         success: function(data){
+
             var list =data.list;
                 $.each(list, function (index, array) {
                     var junoname=array['NAME'];
                     var junolevel=array['LEVEL'];
                     if (junoname=="QWVB"||junolevel==99){
+
                         alert("Logout Sucessed!");
                         window.location.href="index.html";
+
                     }
                     else{
                         myFun(junoname,junolevel);
@@ -25,3 +29,4 @@ function logout(){
         }
     });
 }
+

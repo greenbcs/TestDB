@@ -41,14 +41,13 @@ if($filetype=="xlsx"){
 
 }
 else {
-    include("record_illegal_operation.php");
-    $IllegalEN="Illegal to try upload data to nnvtdbt.";
-    recordoperation($IllegalEN);
     echo "<script>alert('This is not a XLSX file!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
     return false;
 }
-
 }else{
+    include("record_illegal_operation.php");
+    $IllegalEN="Illegal to try upload data to nnvtdbt.";
+    recordoperation($IllegalEN);
     print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
 }
 ?>

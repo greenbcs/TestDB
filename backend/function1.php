@@ -65,6 +65,8 @@ function uploadFile($file, $filetempname,$conn)
             $RT = $objPHPExcel->getActiveSheet()->getCell("N".$j)->getValue();//获取N列的值
             $FT = $objPHPExcel->getActiveSheet()->getCell("O".$j)->getValue();//获取O列的值
             $VS = $objPHPExcel->getActiveSheet()->getCell("P".$j)->getValue();//获取P列的值
+            $BR1 = $objPHPExcel->getActiveSheet()->getCell("Q".$j)->getValue();//获取Q列的值
+            $BR2 = $objPHPExcel->getActiveSheet()->getCell("R".$j)->getValue();//获取R列的值
             if($VS=="合格"){
                 $VS='Good';
             }
@@ -77,7 +79,7 @@ function uploadFile($file, $filetempname,$conn)
             }
             //echo $CD0,"/////";
            // $sql = "insert into hamamatsudbt (NO,SN,SK,SP,IDB,SKB,Ebb,DC,Tr,Tf,PP,AP,QE,DE) values ('$row1',".$SN.",".$SK.",".$SP.",".$IDB.",".$SKB.",".$Ebb.",".$DC.",".$Tr.",".$Tf.",".$PP.",".$AP.",".$QE.",".$DE.")";
-            $sql = "insert into nnvtdbt (NO,CD,SN,NQE,HV,G,PvsV,R,DE,DR,TTS,PP,AP,NL,RT,FT,VS,BN,TransportDate) values ('$row1','$CD','$SN','$NQE','$HV','$G','$PvsV','$R','$DE','$DR','$TTS','$PP','$AP','$NL','$RT','$FT','$VS','$BatchNumber','$shippingdate2')";
+            $sql = "insert into nnvtdbt (NO,CD,SN,NQE,HV,G,PvsV,R,DE,DR,TTS,PP,AP,NL,RT,FT,VS,BR1,BR2,BN,TransportDate) values ('$row1','$CD','$SN','$NQE','$HV','$G','$PvsV','$R','$DE','$DR','$TTS','$PP','$AP','$NL','$RT','$FT','$VS','$BR1','$BR2','$BatchNumber','$shippingdate2')";
           //print $sql;
             if (!mysqli_query($conn,$sql))
             {

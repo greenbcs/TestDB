@@ -9,11 +9,11 @@
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" type="image/png" href="assets/i/juno.png">
     <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" >
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/admin.css">
     <style>
         .am-align-left p{
@@ -30,494 +30,325 @@
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
     以获得更好的体验！</p>
 <![endif]-->
-
-<header class="am-topbar am-topbar-inverse admin-header">
-    <div class="am-topbar-brand" style="color: white;">
-        <a href="Home.html"/><img src="assets/i/logo_s.png" /><strong>PMT Instrumentation Database System for JUNO</strong> <small>(Online Solution V4.5)</small>
-    </div>
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
-
-    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
-
-        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-            <li class="am-dropdown" data-am-dropdown>
-                <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                    <span class="am-icon-users"></span>Hi,JUNO<span class="am-icon-caret-down"></span>
-                </a>
-                <ul class="am-dropdown-content">
-                    <li><a href="Illegal-Operation-Logs.html"><span class="am-icon-list-alt"></span> Illegal-Operation-Logs</a></li>
-                    <li><a href="admin-sets.html"><span class="am-icon-cog"></span> Set</a></li>
-                    <li><a onclick="logout()"><span class="am-icon-sign-out"></span> Logout</a></li>
-                </ul>
-            </li>
-            <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">Full Screen</span></a></li>
-        </ul>
-    </div>
-</header>
-
-<div class="am-cf admin-main">
-    <!-- sidebar start -->
-    <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
-        <div class="am-offcanvas-bar admin-offcanvas-bar">
-            <ul class="am-list admin-sidebar-list">
-
-                <li><a href="Home.html"><span class="am-icon-home"></span> Introduction to JUNO</a></li>
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-R'}"><span class="am-icon-keyboard-o"></span> Recording <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-R"><!-- 默认展开添加class am-in-->
-                        <li><a href="upload-manufactuers-original-data.html" class="am-cf"><span class="am-icon-upload"></span> Upload Manufacturers Original Data<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
-                        <!-- <li><a href="warehousing.html"><span class="am-icon-laptop"></span> Warehousing</a></li>-->
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-W'}"><span class="am-icon-laptop"></span> Warehousing <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-W"><!-- 默认展开添加class am-in-->
-                                <li><a href="receive-check.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Check</a></li>
-                                <li><a href="PMTs-storage.html" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage</a></li>
-                            </ul></li>
-                        <li><a href="surface-geometry.html" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry</a></li>
-                        <li><a href="acceptance-test.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test</a></li>
-                        <li><a href="potting.html"><span class="am-icon-th"></span> Potting</a></li>
-
-                    </ul>
-                </li>
-
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Q'}"><span class="am-icon-database"></span> Query<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-Q"><!-- 默认展开添加class am-in-->
-
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-HNOD'}"><span class="am-icon-university"></span> Manufactures Data<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-HNOD"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-Hamamatsu.html" class="am-cf"><span class="am-icon-check-square"></span> Hamamatsu Data</a></li>
-                                <li><a href="query-NNVT.html" class="am-cf"><span class="am-icon-check-square"></span> NNVT Data</a></li>
-                            </ul></li>
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-QW'}"><span class="am-icon-laptop"></span> Warehouse Records <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-QW"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-receive.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Data</a></li>
-                                <li><a href="query-storage.html" class="am-cf"><span class="am-icon-tree"></span> Storage Data </a></li>
-                            </ul></li>
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-SGD'}"><span class="am-icon-cubes"></span> Surface & Geometry Data <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-SGD"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-surface-geometry.html" class="am-cf"><span class="am-icon-file-text-o"></span> Surface & Geometry original Data</a></li>
-                                <li><a href="query-surface-geometry-statistics.html" class="am-cf"><span class="am-icon-columns"></span> Surface & Geometry statistics Data</a></li>
-                            </ul></li>
-                        <li><a href="query-sampling-scan-station.html" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>
-                        <li><a href="query-acceptance-test.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Data</a></li>
-
-                    </ul>
-
-                <li><a href="QRcode.html"><span class="am-icon-qrcode"></span> Make QR code</a></li>
-
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Mapping'}"><span class="am-icon-line-chart"></span> Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-Mapping"><!-- 默认展开添加class am-in-->
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-MM'}"><span class="am-icon-laptop"></span> Manufactures Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-MM"><!-- 默认展开添加class am-in-->
-                                <li><a href="Hamamatsu-Origin-Data-Mapping.html" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Mapping </a></li>
-                                <li><a href="NNVT-Origin-Data-Mapping.html" class="am-cf"><span class="am-icon-university"></span> NNVT Mapping </a></li>
-                            </ul></li>
-
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-WM'}"><span class="am-icon-laptop"></span> Warehousing Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-WM"><!-- 默认展开添加class am-in-->
-                                <li><a href="receive-check-mapping.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Check Mapping </a></li>
-                                <li><a href="PMTs-storage-mapping.html" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage Mapping</a></li>
-                            </ul></li>
-
-                        <li><a href="surface-geometry-mapping.html" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry Mapping </a></li>
-                        <li><a href="container1-test-mapping.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Mapping </a></li>
-                        <li><a href="sampling-scan-station-mapping.html"><span class="am-icon-star"></span> Sampling Scan Station Mapping <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
-                        <li><a href="potting-mapping.html"><span class="am-icon-th"></span> Potting Mapping</a></li>
-
-                    </ul>
-                </li>
-
-
-
-                <li><a href="dictionary.html"><span class="am-icon-book"></span> Data Dictionary</a></li>
-                <li><a href="download.html"><span class="am-icon-download"></span> Download Database</a></li>
-                <li><a href="management.html"><span class="am-icon-group"></span> Management</a></li>
-                <!--<li><a href="admin-logs.html"><span class="am-icon-paw"></span> System Logs</a></li>-->
-                <li><a href="profiles.html"><span class="am-icon-user"></span> Profiles</a></li>
-                <li><a href="Login-Logs.html"><span class="am-icon-paw"></span> Login Logs</a></li>
-            </ul>
-
-            <div class="am-panel am-panel-default admin-sidebar-panel">
-                <div class="am-panel-bd ">
-                    <p><span class="am-icon-bookmark"></span> Notice</p>
-                    <!--<p>This is V4.0 database system!</p>-->
-
-                    <textarea style="border:0;" class="" rows="3" cols="18"  name="notice" id="notice" readonly></textarea>
-                    <!-- <small>250字以内写出你的一生...</small>-->
-
-                </div>
+<!--from here-->
+<div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Surface & Geometry of PMTs</strong></div><div id="tipstxt"></div>
+</div>
+<!--from here-->
+<p> tips:Each Visual Check Data edit box should be separated by commas if there are more than one data,unit:mm.（每个外观检测数据若有多个，请用“,”隔开,单位：mm。）</p>
+<form class="am-form am-form-horizontal" name="SandGForm" id="PSForm" method="GET" onsubmit="return toVaild()" action="backend/surface-gepmetry.php" >
+    <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-form-group">
+            <label for="SN" class="am-u-sm-3 am-form-label">Serial Number</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="SN" id="SN" placeholder="Serial Number" onkeyup="OnPropChanged()"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}" >
             </div>
+        </div>
 
-            <div class="am-panel am-panel-default admin-sidebar-panel">
-                <div class="am-panel-bd">
-                    <p><span class="am-icon-link"></span> Link</p>
-                    <p><a href="http://juno.ihep.ac.cn:8099/PMTtest/">PMT Testing Elog</a></p>
-                    <p><a href="http://idp.ihep.ac.cn/idp/Authn/UserPassword">IHEP DocDB</a></p>
-                    <p><a href="http://www.ihep.cas.cn/dkxzz/juno/">JUNO Homepage</a></p>
-                    <p><a href="http://juno.ihep.ac.cn/mediawiki/index.php/Main_Page">JUNO Wiki</a></p>
-                </div>
+        <div class="am-form-group">
+            <label for="VCD" class="am-u-sm-3 am-form-label">Visual Check Date</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="VCD" id="VCD" placeholder="example:2017-7-12 " onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Diameter" class="am-u-sm-3 am-form-label">Diameter</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Diameter" id="Diameter"  placeholder="Diameter" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Dislocation_flange" class="am-u-sm-3 am-form-label">Dislocation of Flange</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Dislocation_flange" id="Dislocation_flange" placeholder="Dislocation of flange" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Gap_flange" class="am-u-sm-3 am-form-label">Gap of flange</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Gap_flange" id="Gap_flange" placeholder="Gap of flange"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Crack" class="am-u-sm-3 am-form-label">Crack</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Crack" id="Crack" placeholder="0 and empty is on behalf of OK, 1 is on behalf of crack."  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Bubble_a" class="am-u-sm-3 am-form-label">Bubble a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Bubble_a" id="Bubble_a" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Bubble_b" class="am-u-sm-3 am-form-label">Bubble b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Bubble_b" id="Bubble_b" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Scratch_a" class="am-u-sm-3 am-form-label">Scratch a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Scratch_a" id="Scratch_a" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Scratch_b" class="am-u-sm-3 am-form-label">Scratch b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Scratch_b" id="Scratch_b" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
             </div>
         </div>
     </div>
-    <!-- sidebar end -->
 
-
-    <!-- content start -->
-    <div class="admin-content">
-        <div class="admin-content-body">
-            <div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
-                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Surface & Geometry of PMTs</strong></div><div id="tipstxt"></div>
+    <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-form-group">
+            <label for="Uneven_a" class="am-u-sm-3 am-form-label">Uneven a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Uneven_a" id="Uneven_a" placeholder="Uneven a" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}" >
             </div>
-            <!--from here-->
-            <p> tips:Each Visual Check Data edit box should be separated by commas if there are more than one data,unit:mm.（每个外观检测数据若有多个，请用“,”隔开,单位：mm。）</p>
-            <form class="am-form am-form-horizontal" name="SandGForm" id="PSForm" method="GET" onsubmit="return toVaild()" action="backend/surface-gepmetry.php" >
-                <div class="am-u-sm-12 am-u-md-6">
-                <div class="am-form-group">
-                    <label for="SN" class="am-u-sm-3 am-form-label">Serial Number</label>
-                    <div class="am-u-sm-9">
-                        <input type="text" name="SN" id="SN" placeholder="Serial Number" onkeyup="OnPropChanged()"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}" >
-                    </div>
-                </div>
-
-                <div class="am-form-group">
-                    <label for="VCD" class="am-u-sm-3 am-form-label">Visual Check Date</label>
-                    <div class="am-u-sm-9">
-                        <input type="text" name="VCD" id="VCD" placeholder="example:2017-7-12 " onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-
-                    </div>
-                </div>
-
-                <div class="am-form-group">
-                    <label for="Diameter" class="am-u-sm-3 am-form-label">Diameter</label>
-                    <div class="am-u-sm-9">
-                        <input type="text" name="Diameter" id="Diameter"  placeholder="Diameter" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-                    </div>
-                </div>
-
-                <div class="am-form-group">
-                    <label for="Dislocation_flange" class="am-u-sm-3 am-form-label">Dislocation of Flange</label>
-                    <div class="am-u-sm-9">
-                        <input type="text" name="Dislocation_flange" id="Dislocation_flange" placeholder="Dislocation of flange" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-                    </div>
-                </div>
-
-                <div class="am-form-group">
-                <label for="Gap_flange" class="am-u-sm-3 am-form-label">Gap of flange</label>
-                <div class="am-u-sm-9">
-                    <input type="text" name="Gap_flange" id="Gap_flange" placeholder="Gap of flange"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                </div>
-                </div>
-
-                <div class="am-form-group">
-                    <label for="Crack" class="am-u-sm-3 am-form-label">Crack</label>
-                    <div class="am-u-sm-9">
-                        <input type="text" name="Crack" id="Crack" placeholder="0 and empty is on behalf of OK, 1 is on behalf of crack."  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                    </div>
-                </div>
-
-                <div class="am-form-group">
-                    <label for="Bubble_a" class="am-u-sm-3 am-form-label">Bubble a</label>
-                    <div class="am-u-sm-9">
-                        <input type="text" name="Bubble_a" id="Bubble_a" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                    </div>
-                </div>
-
-                    <div class="am-form-group">
-                        <label for="Bubble_b" class="am-u-sm-3 am-form-label">Bubble b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Bubble_b" id="Bubble_b" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Scratch_a" class="am-u-sm-3 am-form-label">Scratch a</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Scratch_a" id="Scratch_a" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Scratch_b" class="am-u-sm-3 am-form-label">Scratch b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Scratch_b" id="Scratch_b" placeholder="example: 1.1,2.2,-1.4"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="am-u-sm-12 am-u-md-6">
-                    <div class="am-form-group">
-                        <label for="Uneven_a" class="am-u-sm-3 am-form-label">Uneven a</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Uneven_a" id="Uneven_a" placeholder="Uneven a" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}" >
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Uneven_b" class="am-u-sm-3 am-form-label">Uneven b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Uneven_b" id="Uneven_b" placeholder="Uneven b " onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Black_impurity_a" class="am-u-sm-3 am-form-label">Black impurity a</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Black_impurity_a" id="Black_impurity_a"  placeholder="Black impurity a" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Dislocation_flange" class="am-u-sm-3 am-form-label">Black impurity b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Black_impurity_b" id="Black_impurity_b" placeholder="Black impurity b" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="White_impurity_a" class="am-u-sm-3 am-form-label">White impurity a</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="White_impurity_a" id="White_impurity_a" placeholder="Gap of flange"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="White_impurity_b" class="am-u-sm-3 am-form-label">White impurity b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="White_impurity_b" id="White_impurity_b" placeholder="White impurity b"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Other_a" class="am-u-sm-3 am-form-label">Other a</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Other_a" id="Other_a" placeholder="Other a"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Other_b" class="am-u-sm-3 am-form-label">Other b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Other_b" id="Other_b" placeholder="Other_b"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Open_bubble_a" class="am-u-sm-3 am-form-label">Open bubble a</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Open_bubble_a" id="Open_bubble_a" placeholder="Open bubble a"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <label for="Open_bubble_b" class="am-u-sm-3 am-form-label">Open bubble b</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="Open_bubble_b" id="Open_bubble_b" placeholder="Open bubble b"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="am-u-sm-12 am-fr" style="left: 50%;">
-                    <input type="submit" class="am-btn am-btn-primary" value="--->Save Data<---">
-                    <p></p>
-                </div>
-            </form>
-            <p></p>
-            <div class="am-cf am-padding" style="border-bottom: 10px solid #eee;"></div>
-            <div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
-                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Uploading Visual Check Data</strong></div>
-            </div>
-            <div class="am-panel am-panel-default">
-                <div class="am-panel-bd">
-                    <div class="am-g">
-                        <div class="am-u-md-4">
-                            <img class="am-img-circle am-img-thumbnail" src="assets/i/visualcheck.jpeg" alt=""/>
-                        </div>
-                        <div class="am-u-md-8">
-                            <p> Here for the Visual Check Data of PMTs  </p>
-                            <form class="am-form" method="post" enctype="multipart/form-data" action="backend/uploadcsv.php">
-                                <div class="am-form-group">
-                                    <input type="file" id="Visualcsv" name="Visualcsv">
-                                    <input type="hidden" name="leadcsv" value="true">
-                                    <p class="am-form-help">Please choose csv file...</p>
-                                    <input type="submit" class="am-btn am-btn-primary am-btn-xs" name="VISUALCHECK" value="Submit for Visual Check Data"/>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-            <!--end here-->
         </div>
 
-        <input type="hidden" name="DBSlevel" id="DBSlevel" value="2">
-        <footer class="admin-content-footer">
-            <hr>
-            <p class="am-padding-left" style="text-align: center;">© 2016-2021 JUNO Team.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions and Comments to wangj443@mail2.sysu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address: No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China</p>
-        </footer>
+        <div class="am-form-group">
+            <label for="Uneven_b" class="am-u-sm-3 am-form-label">Uneven b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Uneven_b" id="Uneven_b" placeholder="Uneven b " onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Black_impurity_a" class="am-u-sm-3 am-form-label">Black impurity a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Black_impurity_a" id="Black_impurity_a"  placeholder="Black impurity a" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Dislocation_flange" class="am-u-sm-3 am-form-label">Black impurity b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Black_impurity_b" id="Black_impurity_b" placeholder="Black impurity b" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="White_impurity_a" class="am-u-sm-3 am-form-label">White impurity a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="White_impurity_a" id="White_impurity_a" placeholder="Gap of flange"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="White_impurity_b" class="am-u-sm-3 am-form-label">White impurity b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="White_impurity_b" id="White_impurity_b" placeholder="White impurity b"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Other_a" class="am-u-sm-3 am-form-label">Other a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Other_a" id="Other_a" placeholder="Other a"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Other_b" class="am-u-sm-3 am-form-label">Other b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Other_b" id="Other_b" placeholder="Other_b"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Open_bubble_a" class="am-u-sm-3 am-form-label">Open bubble a</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Open_bubble_a" id="Open_bubble_a" placeholder="Open bubble a"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="Open_bubble_b" class="am-u-sm-3 am-form-label">Open bubble b</label>
+            <div class="am-u-sm-9">
+                <input type="text" name="Open_bubble_b" id="Open_bubble_b" placeholder="Open bubble b"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+            </div>
+        </div>
+
     </div>
-    <!-- content end -->
+    <div class="am-u-sm-12 am-fr" style="left: 50%;">
+        <input type="submit" class="am-btn am-btn-primary" value="--->Save Data<---">
+        <p></p>
+    </div>
+</form>
+<p></p>
+<div class="am-cf am-padding" style="border-bottom: 10px solid #eee;"></div>
+<div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Uploading Visual Check Data</strong></div>
+</div>
+<div class="am-panel am-panel-default">
+    <div class="am-panel-bd">
+        <div class="am-g">
+            <div class="am-u-md-4">
+                <img class="am-img-circle am-img-thumbnail" src="assets/i/visualcheck.jpeg" alt=""/>
+            </div>
+            <div class="am-u-md-8">
+                <p> Here for the Visual Check Data of PMTs  </p>
+                <form class="am-form" method="post" enctype="multipart/form-data" action="backend/uploadcsv.php">
+                    <div class="am-form-group">
+                        <input type="file" id="Visualcsv" name="Visualcsv">
+                        <input type="hidden" name="leadcsv" value="true">
+                        <p class="am-form-help">Please choose csv file...</p>
+                        <input type="submit" class="am-btn am-btn-primary am-btn-xs" name="VISUALCHECK" value="Submit for Visual Check Data"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
-<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 
+
+
+
+<!--end here-->
+</div>
+
+<input type="hidden" name="DBSlevel" id="DBSlevel" value="2">
+
+<!--end here-->
 
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
+<!--[endif]-->
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.cookie.js"></script>
-<!--<![endif]-->
-<script src="assets/js/amazeui.min.js"></script>
-<!--
-<script src="assets/js/app.js"></script>
-<script src="assets/js/config.js"></script>-->
-<script src="assets/js/vue.min.js"></script>
-<script src="assets/layer/layer.js"></script>
-<script src="assets/datepicker/WdatePicker.js"></script>
-<script src="assets/js/public.js"></script>
 <script src="assets/js/junocheck.js"></script>
-<script src="assets/js/Logout.js"></script>
+
 <script language="javascript">
     $('#SN').focus();
 
 
     function toVaild(){
-    var val1 = document.getElementById("SN").value;
-    var val2 = document.getElementById("VCD").value;
-    var val3 = document.getElementById("Diameter").value;
+        var val1 = document.getElementById("SN").value;
+        var val2 = document.getElementById("VCD").value;
+        var val3 = document.getElementById("Diameter").value;
 //允许备注置空
 //alert(val);
-if(val1 == ""||val2==""||val3==""){
-alert("SN or Visual Check Date or Diameter is empty!");
-return false;
+        if(val1 == ""||val2==""||val3==""){
+            alert("SN or Visual Check Date or Diameter is empty!");
+            return false;
 
-}
-else{
+        }
+        else{
 
-    var BubbleA = document.getElementById("Bubble_a").value;
-    var BubbleB = document.getElementById("Bubble_b").value;
-    var ScratchA = document.getElementById("Scratch_a").value;
-    var ScratchB = document.getElementById("Scratch_b").value;
-    var UnevenA = document.getElementById("Uneven_a").value;
-    var UnevenB = document.getElementById("Uneven_b").value;
-    var BlackImpurityA = document.getElementById("Black_impurity_a").value;
-    var BlackImpurityB = document.getElementById("Black_impurity_b").value;
-    var WhiteImpurityA = document.getElementById("White_impurity_a").value;
-    var WhiteImpurityB = document.getElementById("White_impurity_b").value;
-    var OtherA = document.getElementById("Other_a").value;
-    var OtherB = document.getElementById("Other_b").value;
-    var OpenBubbleA= document.getElementById("Open_bubble_a").value;
-    var OpenBubbleB= document.getElementById("Open_bubble_b").value;
-    var arrayBubbleA=BubbleA.split(",");
-    var arrayBubbleB=BubbleB.split(",");
-    var arrayScratchA=ScratchA.split(",");
-    var arrayScratchB=ScratchB.split(",");
-    var arrayUnevenA=UnevenA.split(",");
-    var arrayUnevenB=UnevenB.split(",");
-    var arrayBlackImpurityA=BlackImpurityA.split(",");
-    var arrayBlackImpurityB=BlackImpurityB.split(",");
-    var arrayWhiteImpurityA=WhiteImpurityA.split(",");
-    var arrayWhiteImpurityB=WhiteImpurityB.split(",");
-    var arrayOtherA=OtherA.split(",");
-    var arrayOtherB=OtherB.split(",");
-    var arrayOpenBubbleA=OpenBubbleA.split(",");
-    var arrayOpenBubbleB=OpenBubbleB.split(",");
-    if(judgment(BubbleA,BubbleB,"Bubble")==10){
-        return false;
-    }else if(judgmentdata(arrayBubbleA,arrayBubbleB,"Bubble")==9||judgmentdata(arrayBubbleA,arrayBubbleB,"Bubble")==7){
-        return false;
-    }
+            var BubbleA = document.getElementById("Bubble_a").value;
+            var BubbleB = document.getElementById("Bubble_b").value;
+            var ScratchA = document.getElementById("Scratch_a").value;
+            var ScratchB = document.getElementById("Scratch_b").value;
+            var UnevenA = document.getElementById("Uneven_a").value;
+            var UnevenB = document.getElementById("Uneven_b").value;
+            var BlackImpurityA = document.getElementById("Black_impurity_a").value;
+            var BlackImpurityB = document.getElementById("Black_impurity_b").value;
+            var WhiteImpurityA = document.getElementById("White_impurity_a").value;
+            var WhiteImpurityB = document.getElementById("White_impurity_b").value;
+            var OtherA = document.getElementById("Other_a").value;
+            var OtherB = document.getElementById("Other_b").value;
+            var OpenBubbleA= document.getElementById("Open_bubble_a").value;
+            var OpenBubbleB= document.getElementById("Open_bubble_b").value;
+            var arrayBubbleA=BubbleA.split(",");
+            var arrayBubbleB=BubbleB.split(",");
+            var arrayScratchA=ScratchA.split(",");
+            var arrayScratchB=ScratchB.split(",");
+            var arrayUnevenA=UnevenA.split(",");
+            var arrayUnevenB=UnevenB.split(",");
+            var arrayBlackImpurityA=BlackImpurityA.split(",");
+            var arrayBlackImpurityB=BlackImpurityB.split(",");
+            var arrayWhiteImpurityA=WhiteImpurityA.split(",");
+            var arrayWhiteImpurityB=WhiteImpurityB.split(",");
+            var arrayOtherA=OtherA.split(",");
+            var arrayOtherB=OtherB.split(",");
+            var arrayOpenBubbleA=OpenBubbleA.split(",");
+            var arrayOpenBubbleB=OpenBubbleB.split(",");
+            if(judgment(BubbleA,BubbleB,"Bubble")==10){
+                return false;
+            }else if(judgmentdata(arrayBubbleA,arrayBubbleB,"Bubble")==9||judgmentdata(arrayBubbleA,arrayBubbleB,"Bubble")==7){
+                return false;
+            }
 
-    if(judgment(ScratchA,ScratchB,"Scratch")==10){
-        return false;
-    }else if(judgmentdata(arrayScratchA,arrayScratchB,"Scratch")==9||judgmentdata(arrayScratchA,arrayScratchB,"Scratch")==7){
-        return false;
-    }
+            if(judgment(ScratchA,ScratchB,"Scratch")==10){
+                return false;
+            }else if(judgmentdata(arrayScratchA,arrayScratchB,"Scratch")==9||judgmentdata(arrayScratchA,arrayScratchB,"Scratch")==7){
+                return false;
+            }
 
-    if(judgment(UnevenA,UnevenB,"Uneven")==10){
-        return false;
-    }else if(judgmentdata(arrayUnevenA,arrayUnevenB,"Uneven")==9||judgmentdata(arrayUnevenA,arrayUnevenB,"Uneven")==7){
-        return false;
-    }
+            if(judgment(UnevenA,UnevenB,"Uneven")==10){
+                return false;
+            }else if(judgmentdata(arrayUnevenA,arrayUnevenB,"Uneven")==9||judgmentdata(arrayUnevenA,arrayUnevenB,"Uneven")==7){
+                return false;
+            }
 
-    if(judgment(BlackImpurityA,BlackImpurityB,"Black impurity")==10){
-        return false;
-    }else if(judgmentdata(arrayBlackImpurityA,arrayBlackImpurityB,"Black impurity")==9||judgmentdata(arrayBlackImpurityA,arrayBlackImpurityB,"Black impurity")==7){
-        return false;
-    }
+            if(judgment(BlackImpurityA,BlackImpurityB,"Black impurity")==10){
+                return false;
+            }else if(judgmentdata(arrayBlackImpurityA,arrayBlackImpurityB,"Black impurity")==9||judgmentdata(arrayBlackImpurityA,arrayBlackImpurityB,"Black impurity")==7){
+                return false;
+            }
 
-    if(judgment(WhiteImpurityA,WhiteImpurityB,"White impurity")==10){
-        return false;
-    }else if(judgmentdata(arrayWhiteImpurityA,arrayWhiteImpurityB,"White impurity")==9||judgmentdata(arrayWhiteImpurityA,arrayWhiteImpurityB,"White impurity")==7){
-        return false;
-    }
+            if(judgment(WhiteImpurityA,WhiteImpurityB,"White impurity")==10){
+                return false;
+            }else if(judgmentdata(arrayWhiteImpurityA,arrayWhiteImpurityB,"White impurity")==9||judgmentdata(arrayWhiteImpurityA,arrayWhiteImpurityB,"White impurity")==7){
+                return false;
+            }
 
-    if(judgment(OtherA,OtherB,"Other")==10){
-        return false;
-    }else if(judgmentdata(arrayOtherA,arrayOtherB,"Other")==9||judgmentdata(arrayOtherA,arrayOtherB,"Other")==7){
-        return false;
-    }
+            if(judgment(OtherA,OtherB,"Other")==10){
+                return false;
+            }else if(judgmentdata(arrayOtherA,arrayOtherB,"Other")==9||judgmentdata(arrayOtherA,arrayOtherB,"Other")==7){
+                return false;
+            }
 
-    if(judgment(OpenBubbleA,OpenBubbleB,"Open bubble")==10){
-        return false;
-    }
-    else if(judgmentdata(arrayOpenBubbleA,arrayOpenBubbleB,"Open bubble")==9||judgmentdata(arrayOpenBubbleA,arrayOpenBubbleB,"Open bubble")==7){
-        return false;
-    }
+            if(judgment(OpenBubbleA,OpenBubbleB,"Open bubble")==10){
+                return false;
+            }
+            else if(judgmentdata(arrayOpenBubbleA,arrayOpenBubbleB,"Open bubble")==9||judgmentdata(arrayOpenBubbleA,arrayOpenBubbleB,"Open bubble")==7){
+                return false;
+            }
 //alert("ok");
 
         }
     }
     function OnPropChanged() {
-    var sn= document.getElementById("SN").value;
+        var sn= document.getElementById("SN").value;
         $.ajax({
             type:'POST',
             url:'backend/SNVCD.php',
             dataType:'text',
             data:{'SN':sn},
-        success: function(json){
-            if(!jQuery.isEmptyObject(json))
-            {
-                var dd = document.getElementById('tipstxt');
-                dd.innerHTML = "Tips:We had recorded this PMT!";
-                //alert("We had received this PMT!");
-            }
-            else{
-                var dd = document.getElementById('tipstxt');
-                dd.innerHTML = "";
-            }
-        },
+            success: function(json){
+                if(!jQuery.isEmptyObject(json))
+                {
+                    var dd = document.getElementById('tipstxt');
+                    dd.innerHTML = "Tips:We had recorded this PMT!";
+                    //alert("We had received this PMT!");
+                }
+                else{
+                    var dd = document.getElementById('tipstxt');
+                    dd.innerHTML = "";
+                }
+            },
             error: function () {
                 alert("Data load failed!");
             }
-    })
+        })
 
     }
 
-    $.ajax({
-
-        url:'backend/NOTICE.php',
-        dataType:'text',
-        type:'POST',
-        //data:{'SN':a},
-        success: function(json) {
-            document.getElementById("notice").value=json;
-        }
-
-    })
 
     $.ajax({
 
