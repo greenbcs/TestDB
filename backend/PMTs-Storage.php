@@ -23,7 +23,8 @@ else{
 $SN = @$_GET['SN'];
 $SR =@$_GET['SR'];
 $SW =@$_GET['SW'];
-$SD =@$_GET['SD'];
+#$SD =@$_GET['SD'];
+$SD = date("Y-m-d H:i:s",time());
 $SP =@$_GET['SP'];
 $Status =@$_GET['Status'];
 $Stage =@$_GET['Stage'];

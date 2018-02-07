@@ -1,7 +1,7 @@
 <?php
 header ( "content-Type: text/html; charset=utf-8" );
 //备份数据库
-require("conn1.php");
+require("conn.php");
 $host=$server;
 $user=$ur;//数据库账号
 $password=$psw;//数据库密码

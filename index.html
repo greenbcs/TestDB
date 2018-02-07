@@ -118,7 +118,7 @@ function Login(){
                     $.each(list, function (index, array) {
                         var SYSU=array['SYSU'];
                         if (SYSU==4){
-                            window.location.href="Home.html";
+                            window.location.href="Home.html?btn=1";
                         }
                         else if(SYSU==2){
                             alert("Login failed!The username or password is wrong");

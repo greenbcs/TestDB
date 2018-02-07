@@ -11,7 +11,19 @@ $.ajax({
 
 })
 
-
+function myAjax(urls)
+{
+	    $.ajax({
+	        url:urls, //请求text内容的路径
+	        type:'post',
+	        data:'',
+	        dataType:'html',
+	        async: false,
+	        success:function(result){
+	        $("#iframeContent").html(result);//div是你要替换内容的div
+	        }
+		});
+}
 function changeFrameHeight(){
     var ifm= document.getElementById("myiframe");
     ifm.height=document.documentElement.clientHeight;
@@ -24,7 +36,7 @@ window.onresize=function(){
 }
 
 
-/**
+
 $(function() {
 
    var $fullText = $('.admin-fullText');
@@ -36,13 +48,13 @@ $(function() {
        $.AMUI.fullscreen.isFullscreen ? $fullText.text('Ecs Screen') : $fullText.text('Full Screen');
     });
 
-   // $.get("Introduction-JUNO.html",function(data){
-     //   $("#iframeContent").html(data);//初始化加载界面
-   // });
+    $.get("Introduction-JUNO.html",function(data){
+        $("#iframeContent").html(data);//初始化加载界面
+    });
 
 })
- **/
 
+/**
 $(document).ready(function(){
 
     $(function(){
@@ -84,7 +96,7 @@ $(document).ready(function(){
         });
 
          **/
-
+/**
     })
 
 });
@@ -131,7 +143,7 @@ $(document).ready(function(){
 
          **/
 
-    })
+/**    })
 
 });
 
@@ -148,7 +160,7 @@ function getCookieFunc(){
     return cookielink;
 };
 
-
+**/
 
 
 
