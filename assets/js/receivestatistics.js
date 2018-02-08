@@ -455,7 +455,8 @@
                 option5 = {
                     title: {
                         text: 'Transport Statistics ' + '(Total:' + totaldelivery.toString() + ')',
-                        x: "left",
+                        x: "center",
+                        subtext: "Transport Date",
                     },
                     tooltip: {
                         trigger: 'axis',
@@ -475,9 +476,9 @@
                     },
                     legend: {
                         //orient: 'vertical',
-                        //right: '0%',
-                        //top: '10%',
-                        left: 'center',
+                        right: '0%',
+                        top: '8%',
+                        //left: 'center',
                         width: '50%',
                         itemWidth: 14,
                         itemHeight: 14,
@@ -496,7 +497,7 @@
                         type: 'category',
                         name: 'Batch Number',
                         nameLocation: 'middle',
-                        nameGap: 20,
+                        nameGap: 30,
                         //nameTextStyle:'bottom',
                         data: BatchNumber
                     },{
@@ -504,10 +505,15 @@
                         axisTick: {
                             alignWithLabel: true
                         },
-                        name: 'Transpost Date',
-                        nameLocation: 'middle',
+                        //name: 'Transpost Date',
+                        nameLocation: '50%',
                         axisLine: {
                             onZero: false,
+                        },
+                        axisLabel: {
+                            //interval: 0,
+                            //margin:10,
+                            rotate:20
                         },
                         data:TransDate
                     }],
