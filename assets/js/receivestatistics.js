@@ -455,8 +455,8 @@
                 option5 = {
                     title: {
                         text: 'Transport Statistics ' + '(Total:' + totaldelivery.toString() + ')',
-                        x: "center",
-                        subtext: "Transport Date",
+                        x: "left",
+                        //subtext: "Transport Date",
                     },
                     tooltip: {
                         trigger: 'axis',
@@ -497,7 +497,7 @@
                         type: 'category',
                         name: 'Batch Number',
                         nameLocation: 'middle',
-                        nameGap: 30,
+                        nameGap: 15,
                         //nameTextStyle:'bottom',
                         data: BatchNumber
                     },{
@@ -505,8 +505,9 @@
                         axisTick: {
                             alignWithLabel: true
                         },
-                        //name: 'Transpost Date',
-                        nameLocation: '50%',
+                        name: 'Transpost Date',
+                        nameLocation: 'middle',
+                        nameGap : 40,
                         axisLine: {
                             onZero: false,
                         },
@@ -520,6 +521,8 @@
                     yAxis: [{
                         type: 'value',
                         name: 'Quantity',
+                        nameLocation: 'middle',
+                        nameGap : 40,
                         axisLabel: {
                             formatter: '{value}'
                         }
