@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js fixed-layout">
+<head>
+    <meta http-equiv="Pragma" contect="no-cache">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="icon" type="image/png" href="assets/i/juno.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" >
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <style>
+        .am-align-left p{
+            text-indent: 2em;
+        }
+        .sideActive{
+            color: #0e90d2 !important;
+        }
+
+    </style>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]-->
+<!--from here-->
+<div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">NNVT Mapping</strong></div>
+</div>
+<p></p>
+<!--from here-->
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 折线图堆叠 -->
+                    <div class="card-box">
+                        <div  id="histogramNQE" style="width: 100%;height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramHV" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 折线图堆叠 -->
+                    <div class="card-box">
+                        <div  id="histogramG" style="width: 100%;height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramPvsV" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 折线图堆叠 -->
+                    <div class="card-box">
+                        <div  id="histogramR" style="width: 100%;height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramDE" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 折线图堆叠 -->
+                    <div class="card-box">
+                        <div  id="histogramDR" style="width: 100%;height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramTTS" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 折线图堆叠 -->
+                    <div class="card-box">
+                        <div  id="histogramPP" style="width: 100%;height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramAP" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 折线图堆叠 -->
+                    <div class="card-box">
+                        <div  id="histogramNL" style="width: 100%;height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramRT" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-u-sm-12 am-u-md-6 am-u-md-6">
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-bd">
+            <div class="content">
+                <div class="am-g">
+                    <!-- 堆叠区域图  -->
+                    <div class="card-box">
+                        <div  id="histogramFT" style="width: 100%;height: 400px;"></div>
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" name="DBSlevel" id="DBSlevel" value="1">
+
+<!--end here-->
+
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<!--[endif]-->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/junocheck.js"></script>
+<script type="text/javascript" src="./assets/js/charts/echarts.min.js" ></script>
+<script type="text/javascript" src="./assets/js/charts/ecStat.js" ></script>
+<script src="./assets/js/nnvtstatistics.js" ></script>
+<script>
+
+
+</script>
+</body>
+</html>
