@@ -4,12 +4,11 @@ var myParames2;
 var DBSgrade = document.getElementById("DBSlevel").value;
 //alert(DBSgrade);
 $.ajax({
-
     url:'backend/junocheck.php',
     dataType:'json',
     type:'POST',
-    data:{'APC':askpostcode},
-        async : false,
+    data:{'APC':askpostcode,'link':document.URL},
+    async : false,
     success: function(json) {
         var list =json.list;
         var junoname=[];

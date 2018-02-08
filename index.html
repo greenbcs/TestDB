@@ -115,10 +115,13 @@ function Login(){
                 data:{'U':username,'P':password},
                 success: function(json) {
                     var list =json.list;
+                    var SYSU=[];
+                    var linkIP=[];
                     $.each(list, function (index, array) {
-                        var SYSU=array['SYSU'];
+                         SYSU=array['SYSU'];
+                         linkIP=array['linkIP']; });
                         if (SYSU==4){
-                            window.location.href="Home.html";
+                            window.location.href=linkIP;
                         }
                         else if(SYSU==2){
                             alert("Login failed!The username or password is wrong");
@@ -129,7 +132,7 @@ function Login(){
                         }
 
 
-                    });
+
                             },
                 error: function () {
                     alert("Login failed!unknown Error!");}

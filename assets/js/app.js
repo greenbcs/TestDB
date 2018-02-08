@@ -10,14 +10,19 @@ $.ajax({
     }
 
 })
-
+/**
 function delHTMLExtension(str){
 	    var reg = /.html$/;
 	    return str.replace(reg,'');
 }
+ **/
 
-function dContentDIV(urls)
+function dContentDIV(link)
 {
+
+        var Sublink=new Array();
+        Sublink=link.split("#");
+        var urls=Sublink[1]+".html";
 	    $.ajax({
 	        url:urls, //请求text内容的路径
 	        type:'post',
@@ -26,17 +31,16 @@ function dContentDIV(urls)
 	        async: false,
 	        success:function(result){
 	        //$("#iframeContent").html(result);//div是你要替换内容的div
-			var objurl = delHTMLExtension(urls);
-			newCookieFunc(urls);
-			var url = getCookieFunc();
+			//var objurl = delHTMLExtension(urls);
+			//newCookieFunc(urls);
+			//var url = getCookieFunc();
 			$("#iframeContent").html(result);
 	        }
 		});
 }
 
 function cookieload(){
-		var objurl = getCookieFunc();
-		dContentDIV(objurl);
+    dContentDIV(document.URL);
 		//if (objurl.length == 0)
 		//{
 		//	document.getElementById("upload-manufactuers-original-data").click();
@@ -65,19 +69,14 @@ $(function() {
     $('#admin-fullscreen').on('click', function() {
        $.AMUI.fullscreen.toggle();
    });
+//就是这里冲突了
+    //$(document).on($.AMUI.fullscreen.raw.fullscreenchange, function() {
+     //  $.AMUI.fullscreen.isFullscreen ? $fullText.text('Ecs Screen') : $fullText.text('Full Screen');
+   // });
 
-    $(document).on($.AMUI.fullscreen.raw.fullscreenchange, function() {
-       $.AMUI.fullscreen.isFullscreen ? $fullText.text('Ecs Screen') : $fullText.text('Full Screen');
-    });
-
-    $.get("Introduction-JUNO.html",function(data){
-        $("#iframeContent").html(data);//初始化加载界面
-    });
 
 })
-$.get("receive-check-statistics.html",function(data){
-    $("#iframeContent").html(data);//初始化加载界面
-});
+
 
 /**
 $(document).ready(function(){
@@ -172,7 +171,7 @@ $(document).ready(function(){
 
 });
 **/
-
+/**
 function newCookieFunc(data){
     $.cookie('cookielink',data,{expires:1,path: '/'});
     //$.cookie('cookieName',"linzhiqiang",{expires:2,path: '/'});
@@ -184,7 +183,9 @@ function getCookieFunc(){
     //alert("cookie的值分别为：cookieId："+cookieId+"  cookieName："+cookieName );
     return cookielink;
 };
+ **/
 
-
-
+//$.get("receive-check-statistics.html",function(data){
+ //   $("#iframeContent").html(data);//初始化加载界面
+//});
 

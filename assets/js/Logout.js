@@ -13,7 +13,6 @@ function logout(){
                     var junoname=array['NAME'];
                     var junolevel=array['LEVEL'];
                     if (junoname=="QWVB"||junolevel==99){
-
                         alert("Logout Sucessed!");
                         window.location.href="index.html";
 

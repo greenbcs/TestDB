@@ -20,6 +20,7 @@ if($junoL23=="2"|$junoL23=="3") {
    $SN = @$_GET['SN'];
    $WHR = @$_GET['WHR'];
 #   $RD = @$_GET['RD'];
+   date_default_timezone_set('Asia/Shanghai');
    $RD = date("Y-m-d H:i:s",time());
    $MF = @$_GET['MF'];
    $Type = @$_GET['Type'];

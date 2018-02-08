@@ -24,6 +24,7 @@ $SN = @$_GET['SN'];
 $SR =@$_GET['SR'];
 $SW =@$_GET['SW'];
 #$SD =@$_GET['SD'];
+date_default_timezone_set('Asia/Shanghai');
 $SD = date("Y-m-d H:i:s",time());
 $SP =@$_GET['SP'];
 $Status =@$_GET['Status'];

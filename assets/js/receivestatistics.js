@@ -12,7 +12,7 @@
             $("#transportbar").append("<h3>loading...</h3>")
         },
         success: function (json) {
-            $("#pieWarehouing").empty();
+            //$("#pieWarehouing").empty();
              var deliverynnvttotal=json.deliverynnvttotal;
              var deliveryhamamatsutotal=json.deliveryhamamatsutotal;
              var warehousingnnvttotal=json.warehousingnnvttotal;
@@ -68,6 +68,7 @@
               for (var i=1;i<=Len1;i++)//即便没有=，有容错机制
               {
                   HamaQuanlity.push(0);
+                  HamaTransportDate.push("NULL");
               }
           }else if(HamaQuanlity.length>NNVTQuanlity.length)
          {
@@ -76,10 +77,22 @@
              for (var i=1;i<=Len1;i++)
              {
                  NNVTQuanlity.push(0);
+                 NNVTTransportDate.push("NULL");
              }
          }else{
              var BatchNumber=HamaBatchNumber;
          }
+            //alert(NNVTTransportDate)
+            //alert(HamaTransportDate)
+            var TransDate=[];
+            for (var j=0;j<(BatchNumber.length);j++)
+           {
+               TransDate.push(HamaTransportDate[j]);
+               TransDate.push(NNVTTransportDate[j]);
+
+
+            }
+
 
             var pie3 = echarts.init(document.getElementById("pieWarehouing"));
             var data1 = [{
@@ -335,6 +348,7 @@
 
 
             var columnar4 = echarts.init(document.getElementById("receivestatistics"));
+
             option4 = {
 
                 title : {
@@ -437,96 +451,107 @@
             columnar4.setOption(option4);
 
             var BarTransport = echarts.init(document.getElementById("transportbar"));
-            option5 = {
-                title: {
-                    text: 'Transport Statistics '+'(Total:'+totaldelivery.toString()+')',
-                    x: "left",
-                },
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: { // 坐标轴指示器，坐标轴触发有效
-                        type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-                    }
-                },
-                toolbox: {
-                    show : true,
-                    feature : {
-                        mark : {show: true},
-                        dataZoom : {show: true},
-                        dataView : {show: true, readOnly: false},
-                        restore : {show: true},
-                        saveAsImage : {show: true}
-                    }
-                },
-                legend: {
-                    //orient: 'vertical',
-                    //right: '0%',
-                    //top: '10%',
-                    left: 'center',
-                    width: '50%',
-                    itemWidth: 14,
-                    itemHeight: 14,
-                    itemBorderRadius: 8,
-                    data: ['Hamamatsu', 'NNVT'],
-                    // align: 'right',
-                    //right: 10
-                },
-                grid: {
-                    left: '3%',
-                    right: '4%',
-                    bottom: '3%',
-                    containLabel: true
-                },
-                xAxis: [{
-                    type: 'category',
-                    name: 'Batch Number',
-                    nameLocation:'middle',
-                    nameGap:20,
-                    //nameTextStyle:'bottom',
-                    data:BatchNumber
-                }],
-                yAxis: [{
-                    type: 'value',
-                    name: 'Quantity',
-                    axisLabel: {
-                        formatter: '{value}'
-                    }
-                }],
-                series: [{
-                    name: 'Hamamatsu',
-                    type: 'bar',
-                    label: {
-                        normal: {
-                            show: true,
-                            position: 'top'
+
+                option5 = {
+                    title: {
+                        text: 'Transport Statistics ' + '(Total:' + totaldelivery.toString() + ')',
+                        x: "left",
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
                         }
                     },
-                   // itemStyle: {
-                   //     normal: {
-                   //         color: '#86D560'//color: ['#86D560', '#AF89D6']
-                   //     }
-                   // },
-                    data: HamaQuanlity
-                }, {
-                    name: 'NNVT',
-                    type: 'bar',
-                    label: {
-                        normal: {
-                            show: true,
-                            position: 'top'
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: true},
+                            dataZoom: {show: true},
+                            dataView: {show: true, readOnly: false},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
                         }
                     },
-                   // itemStyle: {
-                    //    normal: {
+                    legend: {
+                        //orient: 'vertical',
+                        //right: '0%',
+                        //top: '10%',
+                        left: 'center',
+                        width: '50%',
+                        itemWidth: 14,
+                        itemHeight: 14,
+                        itemBorderRadius: 8,
+                        data: ['Hamamatsu', 'NNVT'],
+                        // align: 'right',
+                        //right: 10
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: [{
+                        type: 'category',
+                        name: 'Batch Number',
+                        nameLocation: 'middle',
+                        nameGap: 20,
+                        //nameTextStyle:'bottom',
+                        data: BatchNumber
+                    },{
+                        type: 'category',
+                        axisTick: {
+                            alignWithLabel: true
+                        },
+                        name: 'Transpost Date',
+                        nameLocation: 'middle',
+                        axisLine: {
+                            onZero: false,
+                        },
+                        data:TransDate
+                    }],
+                    yAxis: [{
+                        type: 'value',
+                        name: 'Quantity',
+                        axisLabel: {
+                            formatter: '{value}'
+                        }
+                    }],
+                    series: [{
+                        name: 'Hamamatsu',
+                        type: 'bar',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top'
+                            }
+                        },
+                        // itemStyle: {
+                        //     normal: {
+                        //         color: '#86D560'//color: ['#86D560', '#AF89D6']
+                        //     }
+                        // },
+                        data: HamaQuanlity
+                    }, {
+                        name: 'NNVT',
+                        type: 'bar',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top'
+                            }
+                        },
+                        // itemStyle: {
+                        //    normal: {
 
-                    //        color: '#AF89D6'
-                   //     }
-                  //  },
-                    data: NNVTQuanlity
-                }]
-            };
-            BarTransport.setOption(option5);
-
+                        //        color: '#AF89D6'
+                        //     }
+                        //  },
+                        data: NNVTQuanlity
+                    }]
+                };
+                BarTransport.setOption(option5);
         },
         // complete: function () { //生成分页条
         //alert("Bar load failed!");
@@ -538,3 +563,4 @@
     });
 
 })();
+

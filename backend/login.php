@@ -9,6 +9,8 @@ if(!$sql1){
     $SYSU=1;
     $arr['list'][] = array(
         'SYSU'=>$SYSU,
+        'linkIP'=>'index.html',
+
     );
 }
 else{
@@ -25,11 +27,17 @@ else{
     $salt = "IhEP0527";
     $sysuencodepassword = generateHashWithSalt($sysupassword);
     if($sysuencodepassword==$pmtpassword){
+        $linkIPsql= mysqli_query($conn, "select * from pmtdb_access_logs where NO=(select max(NO) from pmtdb_access_logs) ");
+        while ($row = mysqli_fetch_assoc($linkIPsql)) {
+            $linkIP = $row['Access_URL'];
+            //echo $num;
+        }
         $SYSU=4;
         $arr['list'][] = array(
             //'junoname' => $sysuusername,
            // 'junolevel' => $pmtlevel,
             'SYSU'=>$SYSU,
+            'linkIP'=>$linkIP,
         );
         $pmtstatus="Successed";
         $sqlnum = mysqli_query($conn,"select * from pmtusers_login_logs") or die(mysqli_connect_error());
@@ -51,6 +59,7 @@ else{
         $_SESSION["JUNOLEVEL"]=$pmtlevel;
         $_SESSION["JUNOPASSWORD"]=$sysuencodepassword;
         $_SESSION["JUNOLOGINIP"]=$pmtloginip;
+
         //print "<script>alert('login success!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";
     }
     else{
@@ -73,6 +82,8 @@ else{
         $SYSU=2;
         $arr['list'][] = array(
             'SYSU'=>$SYSU,
+            'linkIP'=>'index.html',
+
         );
     }
 
