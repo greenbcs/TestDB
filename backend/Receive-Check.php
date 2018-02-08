@@ -48,7 +48,7 @@ if($junoL23=="2"|$junoL23=="3") {
            print "<script>alert('Notice: This PMT not exist in Original data table,PLease record it!(厂家原始数据中没有这支PMT，请记录下来！) ');</script>";
        }
 
-      print "<script>alert('Add Success!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+      print "<script>;location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
    }
 }else{
    include("record_illegal_operation.php");

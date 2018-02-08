@@ -48,7 +48,7 @@ else
     {
        die('Error: ' . mysqli_error($conn));
      }
-    else{print "<script>alert('Add Success!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";}
+    else{print "<script>location.href='".$_SERVER["HTTP_REFERER"]."' </script>";}
     if (!mysqli_query($conn,$sql6))
     {
         die('Error: ' . mysqli_error($conn));
