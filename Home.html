@@ -25,7 +25,7 @@
 
     </style>
 </head>
-<body>
+<body onload="cookieload()">
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
     以获得更好的体验！</p>
@@ -45,8 +45,8 @@
                     <span class="am-icon-users"></span> Hi,JUNO <span class="am-icon-caret-down"></span>
                 </a>
                 <ul class="am-dropdown-content">
-                    <li><a href="Illegal-Operation-Logs.html" ><span class="am-icon-list-alt"></span> Illegal-Operation-Logs</a></li>
-                    <li><a href="admin-sets.html"  ><span class="am-icon-cog"></span> Set</a></li>
+                    <li><a id="Illegal-Operation-Logs" href="#" onclick="dContentDIV('Illegal-Operation-Logs.html')"><span class="am-icon-list-alt"></span> Illegal-Operation-Logs</a></li>
+                    <li><a id="admin-sets" href="#" onclick="dContentDIV('admin-sets.html')"  ><span class="am-icon-cog"></span> Set</a></li>
                     <li><a onclick="logout()"><span class="am-icon-sign-out"></span> Logout</a></li>
                 </ul>
             </li>
@@ -61,21 +61,21 @@
         <div class="am-offcanvas-bar admin-offcanvas-bar">
             <ul class="am-list admin-sidebar-list">
 
-                <li><a href="Introduction-JUNO.html" ><span class="am-icon-home"></span> Introduction to JUNO</a></li>
+                <li><a id="Introduction-JUNO" href="#" onclick="dContentDIV('Introduction-JUNO.html')" ><span class="am-icon-home"></span> Introduction to JUNO</a></li>
                 <li class="admin-parent">
                     <a class="am-cf" data-am-collapse="{target: '#collapse-nav-R'}"><span class="am-icon-keyboard-o"></span> Recording <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-R"><!-- 默认展开添加class am-in-->
-                        <li><a href="upload-manufactuers-original-data.html" class="am-cf"><span class="am-icon-upload"></span> Upload Manufacturers Original Data<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+                        <li><a id="upload-manufactuers-original-data" href="#" onclick="dContentDIV('upload-manufactuers-original-data.html')" class="am-cf"><span class="am-icon-upload"></span> Upload Manufacturers Original Data<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
                         <!-- <li><a href="warehousing.html"><span class="am-icon-laptop"></span> Warehousing</a></li>-->
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-W'}"><span class="am-icon-laptop"></span> Warehousing <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-W"><!-- 默认展开添加class am-in-->
-                                <li><a href="receive-check.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Check</a></li>
-                                <li><a href="PMTs-storage.html" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage</a></li>
+                                <li><a id="receive-check" href="#" onclick="dContentDIV('receive-check.html')" class="am-cf"><span class="am-icon-check-square"></span> Receive Check</a></li>
+                                <li><a id="PMTs-storage" href="#" onclick="dContentDIV('PMTs-storage.html')" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage</a></li>
                             </ul></li>
-                        <li><a href="surface-geometry.html" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry</a></li>
-                        <li><a href="acceptance-test.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test</a></li>
-                        <li><a href="potting.html" ><span class="am-icon-th"></span> Potting</a></li>
+                        <li><a id="surface-geometry" href="#" onclick="dContentDIV('surface-geometry.html')" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry</a></li>
+                        <li><a id="acceptance-test" href="#" onclick="dContentDIV('acceptance-test.html')" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test</a></li>
+                        <li><a id="potting" href="#" onclick="dContentDIV('potting.html')" ><span class="am-icon-th"></span> Potting</a></li>
 
                     </ul>
                 </li>
@@ -87,27 +87,27 @@
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-HNOD'}"><span class="am-icon-university"></span> Manufactures Data<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-HNOD"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-Hamamatsu.html"  class="am-cf"><span class="am-icon-check-square"></span> Hamamatsu Data</a></li>
-                                <li><a href="query-NNVT.html"  class="am-cf"><span class="am-icon-check-square"></span> NNVT Data</a></li>
+                                <li><a id="query-Hamamatsu" href="#" onclick="dContentDIV('query-Hamamatsu.html')"  class="am-cf"><span class="am-icon-check-square"></span> Hamamatsu Data</a></li>
+                                <li><a id="query-NNVT" href="#" onclick="dContentDIV('query-NNVT.html')"  class="am-cf"><span class="am-icon-check-square"></span> NNVT Data</a></li>
                             </ul></li>
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-QW'}"><span class="am-icon-laptop"></span> Warehouse Records <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-QW"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-receive.html" class="am-cf"><span class="am-icon-check-square"></span> Receive Data</a></li>
-                                <li><a href="query-storage.html"  class="am-cf"><span class="am-icon-tree"></span> Storage Data </a></li>
+                                <li><a id="query-receive" href="#" onclick="dContentDIV('query-receive.html')" class="am-cf"><span class="am-icon-check-square"></span> Receive Data</a></li>
+                                <li><a id="query-storage" href="#" onclick="dContentDIV('query-storage.html')"  class="am-cf"><span class="am-icon-tree"></span> Storage Data </a></li>
                             </ul></li>
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-SGD'}"><span class="am-icon-cubes"></span> Surface & Geometry Data <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-SGD"><!-- 默认展开添加class am-in-->
-                                <li><a href="query-surface-geometry.html" class="am-cf"><span class="am-icon-file-text-o"></span> Surface & Geometry original Data</a></li>
-                                <li><a href="query-surface-geometry-statistics.html" class="am-cf"><span class="am-icon-columns"></span> Surface & Geometry statistics Data</a></li>
+                                <li><a id="query-surface-geometry" href="#" onclick="dContentDIV('query-surface-geometry.html')" class="am-cf"><span class="am-icon-file-text-o"></span> Surface & Geometry original Data</a></li>
+                                <li><a id="query-surface-geometry-statistics" href="#" onclick="dContentDIV('query-surface-geometry-statistics.html')" class="am-cf"><span class="am-icon-columns"></span> Surface & Geometry statistics Data</a></li>
                             </ul></li>
-                        <li><a href="query-sampling-scan-station.html" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>
-                        <li><a href="query-acceptance-test.html" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Data</a></li>
+                        <li><a id="query-sampling-scan-station" href="#" onclick="dContentDIV('query-sampling-scan-station.html')" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>
+                        <li><a id="query-acceptance-test" href="#" onclick="dContentDIV('query-acceptance-test.html')" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Data</a></li>
 
                     </ul>
 
-                <li><a href="QRcode.html" ><span class="am-icon-qrcode"></span> Make QR code</a></li>
+                <li><a id="QRcode" href="#" onclick="dContentDIV('QRcode.html')" ><span class="am-icon-qrcode"></span> Make QR code</a></li>
 
                 <li class="admin-parent">
                     <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Mapping'}"><span class="am-icon-line-chart"></span> Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
@@ -115,33 +115,33 @@
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-MM'}"><span class="am-icon-laptop"></span> Manufactures Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-MM"><!-- 默认展开添加class am-in-->
-                                <li><a href="Hamamatsu-Origin-Data-Mapping.html" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Mapping </a></li>
-                                <li><a href="NNVT-Origin-Data-Mapping.html"  class="am-cf"><span class="am-icon-university"></span> NNVT Mapping </a></li>
+                                <li><a id="Hamamatsu-Origin-Data-Mapping" href="#" onclick="dContentDIV('Hamamatsu-Origin-Data-Mapping.html')" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Mapping </a></li>
+                                <li><a id="NNVT-Origin-Data-Mapping" href="#" onclick="dContentDIV('NNVT-Origin-Data-Mapping.html')"  class="am-cf"><span class="am-icon-university"></span> NNVT Mapping </a></li>
                             </ul></li>
 
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-WM'}"><span class="am-icon-laptop"></span> Warehousing Mapping <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-WM"><!-- 默认展开添加class am-in-->
-                                <li><a href="receive-check-mapping.html" ><span class="am-icon-check-square"></span> Receive Check Mapping </a></li>
-                                <li><a href="PMTs-storage-mapping.html"><span class="am-icon-tree"></span> PMTs Storage Mapping</a></li>
+                                <li><a id="receive-check-mapping" href="#" onclick="dContentDIV('receive-check-mapping.html')" ><span class="am-icon-check-square"></span> Receive Check Mapping </a></li>
+                                <li><a id="PMTs-storage-mapping" href="#" onclick="dContentDIV('PMTs-storage-mapping.html')"><span class="am-icon-tree"></span> PMTs Storage Mapping</a></li>
                             </ul></li>
 
-                        <li><a href="surface-geometry-mapping.html" ><span class="am-icon-cubes"></span> Surface & Geometry Mapping </a></li>
-                        <li><a href="container1-test-mapping.html"><span class="am-icon-star-half-empty"></span> Container1 Test Mapping </a></li>
-                        <li><a href="sampling-scan-station-mapping.html"  ><span class="am-icon-star"></span> Sampling Scan Station Mapping <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
-                        <li><a href="potting-mapping.html" ><span class="am-icon-th"></span> Potting Mapping</a></li>
+                        <li><a id="surface-geometry-mapping" href="#" onclick="dContentDIV('surface-geometry-mapping.html')" ><span class="am-icon-cubes"></span> Surface & Geometry Mapping </a></li>
+                        <li><a id="container1-test-mapping" href="#" onclick="dContentDIV('container1-test-mapping.html')"><span class="am-icon-star-half-empty"></span> Container1 Test Mapping </a></li>
+                        <li><a id="sampling-scan-station-mapping" href="#" onclick="dContentDIV('sampling-scan-station-mapping.html')"  ><span class="am-icon-star"></span> Sampling Scan Station Mapping <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
+                        <li><a id="potting-mapping" href="#" onclick="dContentDIV('potting-mapping.html')" ><span class="am-icon-th"></span> Potting Mapping</a></li>
 
                     </ul>
                 </li>
 
 
 
-                <li><a href="dictionary.html"><span class="am-icon-book"></span> Data Dictionary</a></li>
-                <li><a href="download.html" ><span class="am-icon-download"></span> Download Database</a></li>
-                <li><a href="management.html" ><span class="am-icon-group"></span> Management</a></li>
+                <li><a id="dictionary" href="#" onclick="dContentDIV('dictionary.html')"><span class="am-icon-book"></span> Data Dictionary</a></li>
+                <li><a id="download" href="#" onclick="dContentDIV('download.html')" ><span class="am-icon-download"></span> Download Database</a></li>
+                <li><a id="management" href="#" onclick="dContentDIV('management.html')" ><span class="am-icon-group"></span> Management</a></li>
                 <!--<li><a href="admin-logs.html"><span class="am-icon-paw"></span> System Logs</a></li>-->
-                <li><a href="profiles.html"><span class="am-icon-user"></span> Profiles</a></li>
-                <li><a href="Login-Logs.html" ><span class="am-icon-paw"></span> Login Logs</a></li>
+                <li><a id="profiles" href="#" onclick="dContentDIV('profiles.html')"><span class="am-icon-user"></span> Profiles</a></li>
+                <li><a id="Login-Logs" href="#" onclick="dContentDIV('Login-Logs.html')" ><span class="am-icon-paw"></span> Login Logs</a></li>
             </ul>
 
             <div class="am-panel am-panel-default admin-sidebar-panel">
@@ -175,8 +175,8 @@
         <div class="admin-content-body">
 
             <!--empty from here-->
-
-            <div id="iframeContent" onload="changeFrameHeight()"></div>
+            <div id="iframeContent" onload="changeFrameHeight()">
+		    </div>	
 <!--width="100%" height="100" scrolling="no" frameborder='0' name="mainframe" id="myiframe" onload="changeFrameHeight()"-->
             <!--empty end here-->
       </div>
