@@ -11,7 +11,12 @@ $.ajax({
 
 })
 
-function myAjax(urls)
+function delHTMLExtension(str){
+	    var reg = /.html$/;
+	    return str.replace(reg,'');
+}
+
+function dContentDIV(urls)
 {
 	    $.ajax({
 	        url:urls, //请求text内容的路径
@@ -20,10 +25,27 @@ function myAjax(urls)
 	        dataType:'html',
 	        async: false,
 	        success:function(result){
-	        $("#iframeContent").html(result);//div是你要替换内容的div
+	        //$("#iframeContent").html(result);//div是你要替换内容的div
+			var objurl = delHTMLExtension(urls);
+			newCookieFunc(urls);
+			var url = getCookieFunc();
+			$("#iframeContent").html(result);
 	        }
 		});
 }
+
+function cookieload(){
+		var objurl = getCookieFunc();
+		dContentDIV(objurl);
+		//if (objurl.length == 0)
+		//{
+		//	document.getElementById("upload-manufactuers-original-data").click();
+		//}else
+		//{
+		//	document.getElementById(objurl).click();
+		//}
+}
+
 function changeFrameHeight(){
     var ifm= document.getElementById("myiframe");
     ifm.height=document.documentElement.clientHeight;
@@ -87,7 +109,7 @@ $(document).ready(function(){
             });
             return false
         }
-
+**/
         /**
          $("#iframeContent").load("Introduction-JUNO.html");
          $('.admin-sidebar-list li').click(function() {
@@ -133,7 +155,7 @@ $(document).ready(function(){
             });
             return false
         }
-
+**/
         /**
          $("#iframeContent").load("Introduction-JUNO.html");
          $('.admin-sidebar-list li').click(function() {
@@ -142,11 +164,11 @@ $(document).ready(function(){
         });
 
          **/
-
-/**    })
+/**
+    })
 
 });
-
+**/
 
 function newCookieFunc(data){
     $.cookie('cookielink',data,{expires:1,path: '/'});
@@ -159,8 +181,6 @@ function getCookieFunc(){
     //alert("cookie的值分别为：cookieId："+cookieId+"  cookieName："+cookieName );
     return cookielink;
 };
-
-**/
 
 
 
