@@ -54,13 +54,6 @@
         </div>
 
         <div class="am-form-group">
-            <label for="RD" class="am-u-sm-3 am-form-label"><!--Receive Date--!>            </label>
-            <div class="am-u-sm-9">
-                <!-- <input type="text" name="RD" id="RD"  readonly/>--!><!-- onfocus="WdatePicker({lang:'en',dateFmt:'yyyy-mm-dd HH:mm:ss'})"--!>
-            </div> 
-        </div>
-
-        <div class="am-form-group">
             <label for="MF" class="am-u-sm-3 am-form-label">Manufacturer</label>
             <div class="am-u-sm-9">
                 <input type="text" name="MF" id="MF" placeholder="Manufacturer" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
@@ -125,7 +118,7 @@
 <script src="assets/js/WRhistory10.js"></script>
 <script language="javascript">
     $('#SN').focus();
-    window.onload=function(){
+    /**window.onload=function(){
 //定时器每秒调用一次fnDate()
         setInterval(function(){
             fnDate();
@@ -143,19 +136,18 @@
         var s = d.getFullYear().toString() + '-' + addzero(d.getMonth() + 1) + '-' + addzero(d.getDate()) + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 
         document.getElementById('RD').value = s;
-    }
+    }**/
 
     function toVaild(){
         var val1 = document.getElementById("SN").value;
         var val2 = document.getElementById("WHR").value;
-        var val3 = document.getElementById("RD").value;
         var val4 = document.getElementById("MF").value;
         var val5 = document.getElementById("Type").value;
         var val6 = document.getElementById("PD").value;
         var val7 = document.getElementById("BA").value;
         //允许入库备注置空
         //alert(val);
-        if(val1 == ""||val2==""||val3==""||val4==""||val5==""||val6==""||val7==""){
+        if(val1 == ""||val2==""||val4==""||val5==""||val6==""||val7==""){
             alert("Something is empty!");
             return false;
         }
