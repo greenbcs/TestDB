@@ -22,6 +22,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.4824121">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Hamamatsu-Origin-Data-Statistics.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hamamatsu-Origin-Data-Statistics.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -37,46 +47,13 @@
       <file leaf-file-name="Home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state vertical-scroll-proportion="-13.125">
+              <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1518084304634" expanded="true" signature="1067:1176" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Receive-Check.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/Receive-Check.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.625">
-              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-              <folding>
-                <marker date="1518092704474" expanded="true" signature="241:268" placeholder="select * fro..receive_check..." />
-                <marker date="1518092704474" expanded="true" signature="422:494" placeholder="select * fro..receive_check..." />
-                <marker date="1518092704474" expanded="true" signature="870:996" placeholder="insert into ..." />
-                <marker date="1518092704474" expanded="true" signature="1180:1221" placeholder="select * fro..hamamatsudbt..." />
-                <marker date="1518092704474" expanded="true" signature="1287:1323" placeholder="select * fro..nnvtdbt..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PMTs-Storage.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/PMTs-Storage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6806283">
-              <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-              <folding>
-                <marker date="1518092704482" expanded="true" signature="236:262" placeholder="select * fro..pmts_storage..." />
-                <marker date="1518092704482" expanded="true" signature="395:465" placeholder="select * fro..pmts_storage..." />
-                <marker date="1518092704482" expanded="true" signature="825:868" placeholder="select * fro..receive_check..." />
-                <marker date="1518092704482" expanded="true" signature="1211:1355" placeholder="insert into ..." />
-                <marker date="1518092704482" expanded="true" signature="1368:1524" placeholder="insert into ..." />
-                <marker date="1518092704482" expanded="true" signature="1525:1625" placeholder="UPDATE SN='$..." />
+                <marker date="1518093354966" expanded="true" signature="1067:1176" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -138,8 +115,6 @@
         <option value="$PROJECT_DIR$/upload-manufactuers-original-data.html" />
         <option value="$PROJECT_DIR$/backend/function1.php" />
         <option value="$PROJECT_DIR$/Illegal-Operation-Logs.html" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/Home.html" />
         <option value="$PROJECT_DIR$/receive-check.html" />
         <option value="$PROJECT_DIR$/surface-geometry-statistics.html" />
         <option value="$PROJECT_DIR$/receive-check-statistics.html" />
@@ -147,6 +122,8 @@
         <option value="$PROJECT_DIR$/Hamamatsu-Origin-Data-Statistics.html" />
         <option value="$PROJECT_DIR$/backend/Receive-Check.php" />
         <option value="$PROJECT_DIR$/backend/PMTs-Storage.php" />
+        <option value="$PROJECT_DIR$/Home.html" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
       </list>
     </option>
   </component>
@@ -235,6 +212,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="juno" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestDB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -699,14 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04522613">
-          <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7382199">
@@ -731,6 +718,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/Receive-Check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.625">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <marker date="1518092704474" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
+            <marker date="1518092704474" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
+            <marker date="1518092704474" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1518092704474" expanded="true" signature="-1:-1" placeholder="select * fro..hamamatsudbt..." />
+            <marker date="1518092704474" expanded="true" signature="-1:-1" placeholder="select * fro..nnvtdbt..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/PMTs-Storage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="33" />
+          <folding>
+            <marker date="1518092704482" expanded="true" signature="-1:-1" placeholder="select * fro..pmts_storage..." />
+            <marker date="1518092704482" expanded="true" signature="-1:-1" placeholder="select * fro..pmts_storage..." />
+            <marker date="1518092704482" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
+            <marker date="1518092704482" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1518092704482" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1518092704482" expanded="true" signature="-1:-1" placeholder="UPDATE SN='$..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1518093354966" expanded="true" signature="1067:1176" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hamamatsu-Origin-Data-Statistics.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
@@ -741,45 +770,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1518084304634" expanded="true" signature="1067:1176" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Receive-Check.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.625">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <marker date="1518092704474" expanded="true" signature="241:268" placeholder="select * fro..receive_check..." />
-            <marker date="1518092704474" expanded="true" signature="422:494" placeholder="select * fro..receive_check..." />
-            <marker date="1518092704474" expanded="true" signature="870:996" placeholder="insert into ..." />
-            <marker date="1518092704474" expanded="true" signature="1180:1221" placeholder="select * fro..hamamatsudbt..." />
-            <marker date="1518092704474" expanded="true" signature="1287:1323" placeholder="select * fro..nnvtdbt..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/PMTs-Storage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6806283">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-          <folding>
-            <marker date="1518092704482" expanded="true" signature="236:262" placeholder="select * fro..pmts_storage..." />
-            <marker date="1518092704482" expanded="true" signature="395:465" placeholder="select * fro..pmts_storage..." />
-            <marker date="1518092704482" expanded="true" signature="825:868" placeholder="select * fro..receive_check..." />
-            <marker date="1518092704482" expanded="true" signature="1211:1355" placeholder="insert into ..." />
-            <marker date="1518092704482" expanded="true" signature="1368:1524" placeholder="insert into ..." />
-            <marker date="1518092704482" expanded="true" signature="1525:1625" placeholder="UPDATE SN='$..." />
-          </folding>
+        <state vertical-scroll-proportion="1.4824121">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

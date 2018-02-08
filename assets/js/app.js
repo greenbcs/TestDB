@@ -75,6 +75,9 @@ $(function() {
     });
 
 })
+$.get("receive-check-statistics.html",function(data){
+    $("#iframeContent").html(data);//初始化加载界面
+});
 
 /**
 $(document).ready(function(){

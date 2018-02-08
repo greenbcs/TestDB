@@ -33,7 +33,7 @@
 
 <header class="am-topbar am-topbar-inverse admin-header">
     <div class="am-topbar-brand" style="color: white;">
-        <a href="Home.html" /><img src="assets/i/logo_s.png" /><strong>PMT Instrumentation Database System for JUNO</strong> <small>(Online Solution V4.5)</small>
+        <a id="Home" href="#" onclick="dContentDIV('receive-check-statistics.html')"  /><img src="assets/i/logo_s.png" /><strong>PMT Instrumentation Database System for JUNO</strong> <small>(Online Solution V4.5)</small>
     </div>
     <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
 
@@ -61,7 +61,32 @@
         <div class="am-offcanvas-bar admin-offcanvas-bar">
             <ul class="am-list admin-sidebar-list">
 
-                <li><a id="Introduction-JUNO" href="#" onclick="dContentDIV('Introduction-JUNO.html')" ><span class="am-icon-home"></span> Introduction to JUNO</a></li>
+               <!-- <li><a id="Introduction-JUNO" href="#" onclick="dContentDIV('Introduction-JUNO.html')" ><span class="am-icon-home"></span> Introduction to JUNO</a></li>-->
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Statistics'}"><span class="am-icon-line-chart"></span> Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-Statistics"><!-- 默认展开添加class am-in-->
+                        <li class="admin-parent">
+                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-MM'}"><span class="am-icon-laptop"></span> Manufactures Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-MM"><!-- 默认展开添加class am-in-->
+                                <li><a id="Hamamatsu-Origin-Data-Statistics" href="#" onclick="dContentDIV('Hamamatsu-Origin-Data-Statistics.html')" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Statistics </a></li>
+                                <li><a id="NNVT-Origin-Data-Statistics" href="#" onclick="dContentDIV('NNVT-Origin-Data-Statistics.html')"  class="am-cf"><span class="am-icon-university"></span> NNVT Statistics </a></li>
+                            </ul></li>
+
+                        <li class="admin-parent">
+                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-WM'}"><span class="am-icon-laptop"></span> Warehousing Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-WM"><!-- 默认展开添加class am-in-->
+                                <li><a id="receive-check-statistics" href="#" onclick="dContentDIV('receive-check-statistics.html')" ><span class="am-icon-check-square"></span> Receive Check Statistics </a></li>
+                                <li><a id="PMTs-storage-statistics" href="#" onclick="dContentDIV('PMTs-storage-statistics.html')"><span class="am-icon-tree"></span> PMTs Storage Statistics</a></li>
+                            </ul></li>
+
+                        <li><a id="surface-geometry-statistics" href="#" onclick="dContentDIV('surface-geometry-statistics.html')" ><span class="am-icon-cubes"></span> Surface & Geometry Statistics </a></li>
+                        <li><a id="container1-test-statistics" href="#" onclick="dContentDIV('container1-test-statistics.html')"><span class="am-icon-star-half-empty"></span> Container1 Test Statistics </a></li>
+                        <li><a id="sampling-scan-station-statistics" href="#" onclick="dContentDIV('sampling-scan-station-statistics.html')"  ><span class="am-icon-star"></span> Sampling Scan Station Statistics <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
+                        <li><a id="potting-statistics" href="#" onclick="dContentDIV('potting-statistics.html')" ><span class="am-icon-th"></span> Potting Statistics</a></li>
+
+                    </ul>
+                </li>
+
                 <li class="admin-parent">
                     <a class="am-cf" data-am-collapse="{target: '#collapse-nav-R'}"><span class="am-icon-keyboard-o"></span> Recording <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-R"><!-- 默认展开添加class am-in-->
@@ -108,33 +133,6 @@
                     </ul>
 
                 <li><a id="QRcode" href="#" onclick="dContentDIV('QRcode.html')" ><span class="am-icon-qrcode"></span> Make QR code</a></li>
-
-                <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav-Statistics'}"><span class="am-icon-line-chart"></span> Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                    <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-Statistics"><!-- 默认展开添加class am-in-->
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-MM'}"><span class="am-icon-laptop"></span> Manufactures Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-MM"><!-- 默认展开添加class am-in-->
-                                <li><a id="Hamamatsu-Origin-Data-Statistics" href="#" onclick="dContentDIV('Hamamatsu-Origin-Data-Statistics.html')" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Statistics </a></li>
-                                <li><a id="NNVT-Origin-Data-Statistics" href="#" onclick="dContentDIV('NNVT-Origin-Data-Statistics.html')"  class="am-cf"><span class="am-icon-university"></span> NNVT Statistics </a></li>
-                            </ul></li>
-
-                        <li class="admin-parent">
-                            <a class="am-cf" data-am-collapse="{target: '#collapse-nav-WM'}"><span class="am-icon-laptop"></span> Warehousing Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                            <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-WM"><!-- 默认展开添加class am-in-->
-                                <li><a id="receive-check-statistics" href="#" onclick="dContentDIV('receive-check-statistics.html')" ><span class="am-icon-check-square"></span> Receive Check Statistics </a></li>
-                                <li><a id="PMTs-storage-statistics" href="#" onclick="dContentDIV('PMTs-storage-statistics.html')"><span class="am-icon-tree"></span> PMTs Storage Statistics</a></li>
-                            </ul></li>
-
-                        <li><a id="surface-geometry-statistics" href="#" onclick="dContentDIV('surface-geometry-statistics.html')" ><span class="am-icon-cubes"></span> Surface & Geometry Statistics </a></li>
-                        <li><a id="container1-test-statistics" href="#" onclick="dContentDIV('container1-test-statistics.html')"><span class="am-icon-star-half-empty"></span> Container1 Test Statistics </a></li>
-                        <li><a id="sampling-scan-station-statistics" href="#" onclick="dContentDIV('sampling-scan-station-statistics.html')"  ><span class="am-icon-star"></span> Sampling Scan Station Statistics <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
-                        <li><a id="potting-statistics" href="#" onclick="dContentDIV('potting-statistics.html')" ><span class="am-icon-th"></span> Potting Statistics</a></li>
-
-                    </ul>
-                </li>
-
-
 
                 <li><a id="dictionary" href="#" onclick="dContentDIV('dictionary.html')"><span class="am-icon-book"></span> Data Dictionary</a></li>
                 <li><a id="download" href="#" onclick="dContentDIV('download.html')" ><span class="am-icon-download"></span> Download Database</a></li>
