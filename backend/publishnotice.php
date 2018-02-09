@@ -29,14 +29,14 @@ if (!mysqli_query($conn,$sql))
     die('Error: ' . mysqli_error($conn));
 }
 else{
-    print "<script>alert('Publish Success!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";
+    print "<script>alert('Publish Success!');location.href='".$_SERVER["HTTP_REFERER"]."#admin-sets' </script>";
 }
 }
 else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to publish Notice.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."'</script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."#404'</script>";
 }
 function getIPaddress()
 {

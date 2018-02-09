@@ -14,13 +14,13 @@ if (!mysqli_query($conn,$query1))
 }else if(!mysqli_query($conn,$query2)){
     die('Error: ' . mysqli_error($conn));
 }
-else{print "<script>alert('Delete Success!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";}
+else{print "<script>alert('Delete Success!');location.href='".$_SERVER["HTTP_REFERER"]."#query-surface-geometry' </script>";}
 
 }
 else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to try to delete surface_geometry and surface_geometry_conclution data.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."'</script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."#404'</script>";
 }
 ?>

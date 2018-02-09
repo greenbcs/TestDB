@@ -17,41 +17,41 @@ if($filetype=="csv") {
             if ($leadcsv == "true") {
                 $filesize = $_FILES['Visualcsv']['size'];
                 if ($filesize > 2881064151) {
-                    echo "<script>alert('Sorry, the file you uploaded exceeds the specified size !!NOT beyond 2M!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                    echo "<script>alert('Sorry, the file you uploaded exceeds the specified size !!NOT beyond 2M!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
                 } else if ($filesize == 0) {
-                    echo "<script>alert('You can not upload NULL!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                    echo "<script>alert('You can not upload NULL!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
                 } else {
 
                     //$do = copy($_FILES['Visualcsv']['tmp_name'],$fname);//复制数据可以检测上传是否成功。
                     $tmp_name = $_FILES ['Visualcsv']['tmp_name'];
                     $msg = uploadcsv($filename, $tmp_name,$conn);
                     if($msg=="Upload Successed!"){
-                        echo "<script>alert('Upload Successed!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                        echo "<script>alert('Upload Successed!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
                     }else{
-                        echo "<script>alert('Upload Failed!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                        echo "<script>alert('Upload Failed!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
                     }
 
                 }
             }
             else {
-                echo "<script>alert('Losting Connect!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                echo "<script>alert('Losting Connect!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
             }
         }else {
-            echo "<script>alert('Please try upload again!');location.href='" . $_SERVER["HTTP_REFERER"] . "'</script>";
+            echo "<script>alert('Please try upload again!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry'</script>";
         }
     }
 
 }
 else
 {
-        echo "<script>alert('This is not a csv file!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+        echo "<script>alert('This is not a csv file!');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
         return false;
     }
 }else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to try upload data to surface_geometry and surface_geometry_conclution.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
 }
 
 

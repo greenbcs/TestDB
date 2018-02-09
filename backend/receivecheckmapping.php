@@ -20,8 +20,8 @@ $result1=mysqli_query($conn,"select DATE_FORMAT(RD,'%Y-%m-%d') as times ,count(M
 //$result2=mysqli_query($conn,"select TIMESTAMPDIFF(SECOND,min(RD),max(RD)) as dm from receive_check group by DATE_FORMAT(RD,'%Y-%m-%d')") or die(mysqli_connect_error());
 //{"deliverynnvttotal":2015,"deliveryhamamatsutotal":1760,"warehousingnnvttotal":2,"warehousinghamamatsutotal":2,"totalwarehousing":4,"totaldelivery":3775,"list":[{"times":"2017-09-08","totalpmt":"1","HamamatsuTotal":"1","NNVTTotal":"0","dm":"0"},{"times":"2017-09-17","totalpmt":"3","HamamatsuTotal":"1","NNVTTotal":"2","dm":"27"}]}
 $result2=mysqli_query($conn,"select DATE_FORMAT(RD,'%Y-%m') as months ,count(MF) as monthstotalpmt,sum(MF='Hamamatsu') as monthsHamamatsuTotal, sum(MF='NNVT') as monthsNNVTTotal from receive_check group by DATE_FORMAT(RD,'%Y-%m')") or die(mysqli_connect_error());
-$result3=mysqli_query($conn,"select TransportDate,BatchNumber,Quanlity  from transport_statistics where Manufactures='Hamamatsu' order by BatchNumber ASC") or die(mysqli_connect_error());
-$result4=mysqli_query($conn,"select TransportDate,BatchNumber,Quanlity  from transport_statistics where Manufactures='NNVT' order by BatchNumber ASC") or die(mysqli_connect_error());
+$result3=mysqli_query($conn,"select TransportDate,BatchNumber,Quanlity  from transport_statistics where Manufactures='Hamamatsu'") or die(mysqli_connect_error());
+$result4=mysqli_query($conn,"select TransportDate,BatchNumber,Quanlity  from transport_statistics where Manufactures='NNVT'") or die(mysqli_connect_error());
 
 $arr['deliverynnvttotal']=$deliverynnvttotal;
 $arr['deliveryhamamatsutotal']=$deliveryhamamatsutotal;

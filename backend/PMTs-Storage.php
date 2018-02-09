@@ -39,7 +39,7 @@ $result=mysqli_query($conn,$sql0);
 if (!mysqli_num_rows($result))
 {
     //echo "<script>alert('We did not receive this PMT!');history.back()</script>";
-    echo "<script>alert('We did not receive this PMT!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";;
+    echo "<script>alert('We did not receive this PMT!');location.href='".$_SERVER["HTTP_REFERER"]."#query-storage' </script>";;
 }
 else
 {
@@ -49,7 +49,7 @@ else
     {
        die('Error: ' . mysqli_error($conn));
      }
-    else{print "<script>location.href='".$_SERVER["HTTP_REFERER"]."' </script>";}
+    else{print "<script>location.href='".$_SERVER["HTTP_REFERER"]."#query-storage' </script>";}
     if (!mysqli_query($conn,$sql6))
     {
         die('Error: ' . mysqli_error($conn));
@@ -57,7 +57,7 @@ else
 }
 }
 else{
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."'</script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."#404'</script>";
 }
 //$sql="insert into pmts_storage (NO,SN,SR,SD,SP,SNote) values ('$row1','$SN','$SR','$SD','$SP','$SNote')";
 //if (!mysqli_query($conn,$sql))

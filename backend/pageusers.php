@@ -61,6 +61,6 @@ else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to overview pmt DBS users.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."'</script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."#404'</script>";
 }
 ?>

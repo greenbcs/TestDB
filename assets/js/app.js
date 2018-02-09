@@ -74,7 +74,6 @@ $(function() {
      //  $.AMUI.fullscreen.isFullscreen ? $fullText.text('Ecs Screen') : $fullText.text('Full Screen');
    // });
 
-
 })
 
 

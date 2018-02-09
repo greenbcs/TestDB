@@ -11,12 +11,12 @@ if (!mysqli_query($conn,$query))
 {
     die('Error: ' . mysqli_error($conn));
 }
-else{print "<script>alert('Delete Success!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";}
+else{print "<script>alert('Delete Success!');location.href='".$_SERVER["HTTP_REFERER"]."#query-storage' </script>";}
 }
 else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to try delete pmts_storage data.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."'</script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."#404'</script>";
 }
 ?>

@@ -51,12 +51,12 @@ $fp = fopen($filename,'w');
 fputs($fp,$mysql);
 fclose($fp);
 //echo "数据备份成功";
-echo "<script>alert('Backup Database!');location.href='".$_SERVER["HTTP_REFERER"]."' </script>";
+echo "<script>alert('Backup Database!');location.href='".$_SERVER["HTTP_REFERER"]."#admin-sets' </script>";
 }
 else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to backup database";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."'</script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='".$_SERVER["HTTP_REFERER"]."#404'</script>";
 }
 ?>

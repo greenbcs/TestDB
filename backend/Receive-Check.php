@@ -49,13 +49,13 @@ if($junoL23=="2"|$junoL23=="3") {
            print "<script>alert('Notice: This PMT not exist in Original data table,PLease record it!(厂家原始数据中没有这支PMT，请记录下来！) ');</script>";
        }
 
-      print "<script>;location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+      print "<script>;location.href='" . $_SERVER["HTTP_REFERER"] . "#receive-check' </script>";
    }
 }else{
    include("record_illegal_operation.php");
    $IllegalEN="Illegal to try add data to receive_check.";
    recordoperation($IllegalEN);
-   print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+   print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "#404' </script>";
 }
 //echo $row1;
 //echo $url;

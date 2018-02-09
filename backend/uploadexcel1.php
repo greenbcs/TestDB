@@ -17,9 +17,9 @@ if($filetype=="xlsx"){
             //  $file_name = "files";
             $filesize = $_FILES['NNVTExcel']['size'];
             if ($filesize > 2881064151) {
-                echo "<script>alert('Sorry, the file you uploaded exceeds the specified size !!NOT beyond 2M!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                echo "<script>alert('Sorry, the file you uploaded exceeds the specified size !!NOT beyond 2M!');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data' </script>";
             } elseif ($filesize == 0) {
-                echo "<script>alert('You can not upload NULL!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                echo "<script>alert('You can not upload NULL!');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data' </script>";
             } else {
 
                 //上传到服务器上的临时文件名
@@ -27,28 +27,28 @@ if($filetype=="xlsx"){
 
                 $msg = uploadFile($filename, $tmp_name,$conn);
                 if($msg=="Upload Failed!"){
-                    echo "<script>alert('Upload Failed!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                    echo "<script>alert('Upload Failed!');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data' </script>";
                 }else{
-                    echo "<script>alert('$msg');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+                    echo "<script>alert('$msg');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data' </script>";
                 }
             }
         } else {
-            echo "<script>alert('Losting Connect!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+            echo "<script>alert('Losting Connect!');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data' </script>";
         }
     } else {
-        echo "<script>alert('Please try upload again!');location.href='" . $_SERVER["HTTP_REFERER"] . "'</script>";
+        echo "<script>alert('Please try upload again!');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data'</script>";
     }
 
 }
 else {
-    echo "<script>alert('This is not a XLSX file!');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+    echo "<script>alert('This is not a XLSX file!');location.href='" . $_SERVER["HTTP_REFERER"] . "#upload-manufactuers-original-data' </script>";
     return false;
 }
 }else{
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to try upload data to nnvtdbt.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "#404' </script>";
 }
 ?>
 

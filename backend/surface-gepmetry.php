@@ -115,7 +115,7 @@ else{print "<script>alert('Add Success!');location.href='".$_SERVER["HTTP_REFERE
     include("record_illegal_operation.php");
     $IllegalEN="Illegal to try add data to surface_geometry and surface_geometry_conclution.";
     recordoperation($IllegalEN);
-    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "' </script>";
+    print "<script>alert('Your authorization or permissions are too low to operate it.');location.href='" . $_SERVER["HTTP_REFERER"] . "#surface-geometry' </script>";
 }
 
 function conclution20170814($data1,$data2,$data3,$data4,$data5,$data6,$data7,$data8,$data9,$data10,$data11,$data12,$data13,$data14,$data15,$data16){
