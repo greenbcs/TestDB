@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js fixed-layout">
 <head>
+	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="Pragma" contect="no-cache">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,15 +26,15 @@
 
     </style>
 </head>
-<body onload="cookieload()">
+<body id="body">
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
     以获得更好的体验！</p>
 <![endif]-->
 <!--链接不用常用的？分割是因为在本项目中这个会导致载入页面载入两次，可能过快，使得数据来不及载出而误报错。最重要的是与众不同，够装逼！-->
-<header class="am-topbar am-topbar-inverse admin-header">
+<header id="header" class="am-topbar am-topbar-inverse admin-header">
     <div class="am-topbar-brand" style="color: white;">
-        <a id="Home" href="#receive-check-statistics" onclick="dContentDIV(href)"  /><img src="assets/i/logo_s.png" /><strong>PMT Instrumentation Database System for JUNO</strong> <small>(Online Solution V4.5)</small>
+        <a id="Home" href="#receive-check-statistics" onclick=""  /><img src="assets/i/logo_s.png" /><strong>PMT Instrumentation Database System for JUNO</strong> <small>(Online Solution V4.5)</small>
     </div>
     <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
 
@@ -41,16 +42,27 @@
 
         <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
             <li class="am-dropdown" data-am-dropdown>
-                <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                    <span class="am-icon-users"></span> Hi,JUNO <span class="am-icon-caret-down"></span>
+                <a class="am-dropdown-toggle" data-am-dropdown-toggle href=";">
+                    <span id="am-dropdown-user" class="am-icon-users"></span> Hi,<span id="IDlabel">JUNO </span><span class="am-icon-caret-down"></span>
                 </a>
                 <ul class="am-dropdown-content">
-                    <li><a id="Illegal-Operation-Logs" href="#Illegal-Operation-Logs" onclick="dContentDIV(href)"><span class="am-icon-list-alt"></span> Illegal-Operation-Logs</a></li>
-                    <li><a id="admin-sets" href="#admin-sets" onclick="dContentDIV(href)"  ><span class="am-icon-cog"></span> Set</a></li>
+                    <li><a id="Illegal-Operation-Logs" href="#Illegal-Operation-Logs" onclick="" ><span class="am-icon-list-alt"></span> Illegal-Operation-Logs</a></li>
+                    <li><a id="admin-sets" href="#admin-sets" onclick=""><span class="am-icon-cog"></span> Set</a></li>
                     <li><a onclick="logout()"><span class="am-icon-sign-out"></span> Logout</a></li>
                 </ul>
             </li>
-            <li class="am-hide-sm-only"><a href="javascript:;" class="tpl-header-list-link" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">Full/Esc Screen</span></a></li>
+			<li class="am-dropdown" data-am-dropdown>
+			    <a id="View" class="am-dropdown-toggle am-primary" data-am-dropdown-toggle href=";">
+					<span id="dropdown-View" class="am-icon-square-o"></span><span class="am-icon-caret-down"></span>
+				</a>
+				<ul class="am-dropdown-content">
+					<li><a id="am-icon-square-o"  onclick="switchView(id)" class="am-icon-square-o"></a></li>
+					<li><a id="am-icon-arrows"  onclick="switchView(id)" class="am-icon-arrows"></a></li>
+					<li><a id="am-icon-arrows-h"  onclick="switchView(id)" class="am-icon-arrows-h"></a></li>
+					<li><a id="am-icon-arrows-v"  onclick="switchView(id)" class="am-icon-arrows-v"></a></li>
+				</ul>
+			</li>
+            <!--<li class="am-hide-sm-only" ><a class="tpl-header-list-link" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span id="Full-View" class="admin-fullText">Full View</span><span id="Individual-View" class="admin-fullText" hidden>Individual View</span></a></li>--!>
         </ul>
     </div>
 </header>
@@ -68,21 +80,21 @@
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-MM'}"><span class="am-icon-laptop"></span> Manufactures Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-MM"><!-- 默认展开添加class am-in-->
-                                <li><a id="Hamamatsu-Origin-Data-Statistics" href="#Hamamatsu-Origin-Data-Statistics" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Statistics </a></li>
-                                <li><a id="NNVT-Origin-Data-Statistics" href="#NNVT-Origin-Data-Statistics" onclick="dContentDIV(href)"  class="am-cf"><span class="am-icon-university"></span> NNVT Statistics </a></li>
+                                <li><a id="Hamamatsu-Origin-Data-Statistics" href="#Hamamatsu-Origin-Data-Statistics" onclick="" class="am-cf"><span class="am-icon-university"></span> Hamamatsu Statistics </a></li>
+                                <li><a id="NNVT-Origin-Data-Statistics" href="#NNVT-Origin-Data-Statistics" onclick=""  class="am-cf"><span class="am-icon-university"></span> NNVT Statistics </a></li>
                             </ul></li>
 
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-WM'}"><span class="am-icon-laptop"></span> Warehousing Statistics <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-WM"><!-- 默认展开添加class am-in-->
-                                <li><a id="receive-check-statistics" href="#receive-check-statistics" onclick="dContentDIV(href)" ><span class="am-icon-check-square"></span> Receive Check Statistics </a></li>
-                                <li><a id="PMTs-storage-statistics" href="#PMTs-storage-statistics" onclick="dContentDIV(href)"><span class="am-icon-tree"></span> PMTs Storage Statistics</a></li>
+                                <li><a id="receive-check-statistics" href="#receive-check-statistics" onclick="" ><span class="am-icon-check-square"></span> Receive Check Statistics </a></li>
+                                <li><a id="PMTs-storage-statistics" href="#PMTs-storage-statistics" onclick=""><span class="am-icon-tree"></span> PMTs Storage Statistics</a></li>
                             </ul></li>
 <!--神奇的是可以实验代入‘href’再alert（urls）出什么-->
-                        <li><a id="surface-geometry-statistics" href="#surface-geometry-statistics" onclick="dContentDIV(href)" ><span class="am-icon-cubes"></span> Surface & Geometry Statistics </a></li>
-                        <li><a id="container1-test-statistics" href="#container1-test-statistics" onclick="dContentDIV(href)"><span class="am-icon-star-half-empty"></span> Container1 Test Statistics </a></li>
-                        <li><a id="sampling-scan-station-statistics" href="#sampling-scan-station-statistics" onclick="dContentDIV(href)"  ><span class="am-icon-star"></span> Sampling Scan Station Statistics <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
-                        <li><a id="potting-statistics" href="#potting-statistics" onclick="dContentDIV(href)" ><span class="am-icon-th"></span> Potting Statistics</a></li>
+                        <li><a id="surface-geometry-statistics" href="#surface-geometry-statistics" onclick="" ><span class="am-icon-cubes"></span> Surface & Geometry Statistics </a></li>
+                        <li><a id="container1-test-statistics" href="#container1-test-statistics" onclick=""><span class="am-icon-star-half-empty"></span> Container1 Test Statistics </a></li>
+                        <li><a id="sampling-scan-station-statistics" href="#sampling-scan-station-statistics" onclick=""  ><span class="am-icon-star"></span> Sampling Scan Station Statistics <span class="am-badge am-badge-secondary am-margin-right am-fr"></span></a></li>
+                        <li><a id="potting-statistics" href="#potting-statistics" onclick="" ><span class="am-icon-th"></span> Potting Statistics</a></li>
 
                     </ul>
                 </li>
@@ -90,17 +102,17 @@
                 <li class="admin-parent">
                     <a class="am-cf" data-am-collapse="{target: '#collapse-nav-R'}"><span class="am-icon-keyboard-o"></span> Recording <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-R"><!-- 默认展开添加class am-in-->
-                        <li><a id="upload-manufactuers-original-data" href="#upload-manufactuers-original-data" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-upload"></span> Upload Manufacturers Original Data<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+                        <li><a id="upload-manufactuers-original-data" href="#upload-manufactuers-original-data" onclick="" class="am-cf"><span class="am-icon-upload"></span> Upload Manufacturers Original Data<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
                         <!-- <li><a href="warehousing.html"><span class="am-icon-laptop"></span> Warehousing</a></li>-->
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-W'}"><span class="am-icon-laptop"></span> Warehousing <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-W"><!-- 默认展开添加class am-in-->
-                                <li><a id="receive-check" href="#receive-check" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-check-square"></span> Receive Check</a></li>
-                                <li><a id="PMTs-storage" href="#PMTs-storage" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage</a></li>
+                                <li><a id="receive-check" href="#receive-check" onclick="" class="am-cf"><span class="am-icon-check-square"></span> Receive Check</a></li>
+                                <li><a id="PMTs-storage" href="#PMTs-storage" onclick="" class="am-cf"><span class="am-icon-tree"></span> PMTs Storage</a></li>
                             </ul></li>
-                        <li><a id="surface-geometry" href="#surface-geometry" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry</a></li>
-                        <li><a id="acceptance-test" href="#acceptance-test" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test</a></li>
-                        <li><a id="potting" href="#potting" onclick="dContentDIV(href)" ><span class="am-icon-th"></span> Potting</a></li>
+                        <li><a id="surface-geometry" href="#surface-geometry" onclick="" class="am-cf"><span class="am-icon-cubes"></span> Surface & Geometry</a></li>
+                        <li><a id="acceptance-test" href="#acceptance-test" onclick="" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test</a></li>
+                        <li><a id="potting" href="#potting" onclick="" ><span class="am-icon-th"></span> Potting</a></li>
 
                     </ul>
                 </li>
@@ -112,34 +124,35 @@
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-HNOD'}"><span class="am-icon-university"></span> Manufactures Data<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-HNOD"><!-- 默认展开添加class am-in-->
-                                <li><a id="query-Hamamatsu" href="#query-Hamamatsu" onclick="dContentDIV(href)"  class="am-cf"><span class="am-icon-check-square"></span> Hamamatsu Data</a></li>
-                                <li><a id="query-NNVT" href="#query-NNVT" onclick="dContentDIV(href)"  class="am-cf"><span class="am-icon-check-square"></span> NNVT Data</a></li>
+                                <li><a id="query-Hamamatsu" href="#query-Hamamatsu" onclick=""  class="am-cf"><span class="am-icon-check-square"></span> Hamamatsu Data</a></li>
+                                <li><a id="query-NNVT" href="#query-NNVT" onclick=""  class="am-cf"><span class="am-icon-check-square"></span> NNVT Data</a></li>
                             </ul></li>
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-QW'}"><span class="am-icon-laptop"></span> Warehouse Records <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-QW"><!-- 默认展开添加class am-in-->
-                                <li><a id="query-receive" href="#query-receive" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-check-square"></span> Receive Data</a></li>
-                                <li><a id="query-storage" href="#query-storage" onclick="dContentDIV(href)"  class="am-cf"><span class="am-icon-tree"></span> Storage Data </a></li>
+                                <li><a id="query-receive" href="#query-receive" onclick="" class="am-cf"><span class="am-icon-check-square"></span> Receive Data</a></li>
+                                <li><a id="query-storage" href="#query-storage" onclick=""  class="am-cf"><span class="am-icon-tree"></span> Storage Data </a></li>
                             </ul></li>
                         <li class="admin-parent">
                             <a class="am-cf" data-am-collapse="{target: '#collapse-nav-SGD'}"><span class="am-icon-cubes"></span> Surface & Geometry Data <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                             <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-SGD"><!-- 默认展开添加class am-in-->
-                                <li><a id="query-surface-geometry" href="#query-surface-geometry" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-file-text-o"></span> Surface & Geometry original Data</a></li>
-                                <li><a id="query-surface-geometry-statistics" href="#query-surface-geometry-statistics" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-columns"></span> Surface & Geometry statistics Data</a></li>
+                                <li><a id="query-surface-geometry" href="#query-surface-geometry" onclick="" class="am-cf"><span class="am-icon-file-text-o"></span> Surface & Geometry original Data</a></li>
+                                <li><a id="query-surface-geometry-statistics" href="#query-surface-geometry-statistics" onclick="" class="am-cf"><span class="am-icon-columns"></span> Surface & Geometry statistics Data</a></li>
                             </ul></li>
-                        <li><a id="query-sampling-scan-station" href="#query-sampling-scan-station" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>
-                        <li><a id="query-acceptance-test" href="#query-acceptance-test" onclick="dContentDIV(href)" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Data</a></li>
+                        <!--<li><a id="query-sampling-scan-station" href="#query-sampling-scan-station" onclick="" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>--!>
+						<li><a id="cross" href="#cross" onclick="" class="am-cf"><span class="am-icon-star"></span> Sampling Scan Station</a></li>
+                        <li><a id="query-acceptance-test" href="#query-acceptance-test" onclick="" class="am-cf"><span class="am-icon-star-half-empty"></span> Container1 Test Data</a></li>
 
                     </ul>
 
-                <li><a id="QRcode" href="#QRcode" onclick="dContentDIV(href)" ><span class="am-icon-qrcode"></span> Make QR code</a></li>
+                <li><a id="QRcode" href="#QRcode" onclick="" ><span class="am-icon-qrcode"></span> Make QR code</a></li>
 
-                <li><a id="dictionary" href="#dictionary" onclick="dContentDIV(href)"><span class="am-icon-book"></span> Data Dictionary</a></li>
-                <li><a id="download" href="#download" onclick="dContentDIV(href)" ><span class="am-icon-download"></span> Download Database</a></li>
-                <li><a id="management" href="#management" onclick="dContentDIV(href)" ><span class="am-icon-group"></span> Management</a></li>
+                <li><a id="dictionary" href="#dictionary" onclick=""><span class="am-icon-book"></span> Data Dictionary</a></li>
+                <li><a id="download" href="#download" onclick="" ><span class="am-icon-download"></span> Download Database</a></li>
+                <li><a id="management" href="#management" onclick="" ><span class="am-icon-group"></span> Management</a></li>
                 <!--<li><a href="admin-logs.html"><span class="am-icon-paw"></span> System Logs</a></li>-->
-                <li><a id="profiles" href="#profiles" onclick="dContentDIV(href)"><span class="am-icon-user"></span> Profiles</a></li>
-                <li><a id="Login-Logs" href="#Login-Logs" onclick="dContentDIV(href)" ><span class="am-icon-paw"></span> Login Logs</a></li>
+                <li><a id="profiles" href="#profiles" onclick=""><span class="am-icon-user"></span> Profiles</a></li>
+                <li><a id="Login-Logs" href="#Login-Logs" onclick="" ><span class="am-icon-paw"></span> Login Logs</a></li>
             </ul>
 
             <div class="am-panel am-panel-default admin-sidebar-panel">
@@ -169,11 +182,11 @@
 
 
     <!-- content start -->
-    <div class="admin-content">
+    <div id="admin-content" class="admin-content">
         <div class="admin-content-body">
 
             <!--empty from here-->
-            <div id="iframeContent" onload="changeFrameHeight()">
+            <div id="iframeContent" onload="changeFrameHeight()" width=100%>
 		    </div>	
 <!--width="100%" height="100" scrolling="no" frameborder='0' name="mainframe" id="myiframe" onload="changeFrameHeight()"-->
             <!--empty end here-->
@@ -181,7 +194,7 @@
 
         <input type="hidden" name="DBSlevel" id="DBSlevel" value="1">
         <!--<iframe id="myiframe" src="PMTs-storage.html" width="1000" height="800"></iframe>-->
-        <footer class="admixn-content-footer">
+        <footer id="footer" class="admixn-content-footer">
             <hr>
             <p class="am-padding-left" style="text-align: center;">© 2016-2021 JUNO Team.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions and Comments to wangj443@mail2.sysu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address: No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China</p>
         </footer>
@@ -194,14 +207,13 @@
 
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.cookie.js"></script>/
+<!--<script src="assets/js/jquery.cookie.js"></script>/--!>
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/junocheck.js"></script>
 <script src="assets/js/Logout.js"></script>
+<!--<script src="assets/js/screenfull.min.js"></script>--!>
 <script src="assets/js/app.js"></script>
 <script>
-
-
 </script>
 </body>
 </html>

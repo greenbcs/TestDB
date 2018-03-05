@@ -1,30 +1,5 @@
 <!doctype html>
 <html class="no-js fixed-layout">
-<head>
-    <meta http-equiv="Pragma" contect="no-cache">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Homepage</title>
-    <meta name="description" content="这是一个 index 页面">
-    <meta name="keywords" content="index">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <link rel="icon" type="image/png" href="assets/i/juno.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" >
-    <link rel="stylesheet" href="assets/css/amazeui.min.css">
-    <link rel="stylesheet" href="assets/css/admin.css">
-    <style>
-        .am-align-left p{
-            text-indent: 2em;
-        }
-        .sideActive{
-            color: #0e90d2 !important;
-        }
-
-    </style>
-</head>
 <body>
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
@@ -37,10 +12,22 @@
 <p></p>
 <div class="am-u-sm-12 am-u-md-6">
     <form class="am-form am-form-horizontal" name="RCForm" id="PSForm" method="GET" onsubmit="return toVaild()" action="backend/PMTs-Storage.php" >
-        <div class="am-form-group">
+	    <div class="am-form-group">
+		    <label for="SD" class="am-u-sm-3 am-form-label">PMT Type</label>
+			<div class="am-form-group">
+				<label class="am-radio-inline">
+					<input type="radio" name="PT" id="PT_NNVT" value="NNVT" checked="checked" onchange="ChangePT()" > NNVT
+				</label>
+				<label class="am-radio-inline">
+					<input type="radio" name="PT" id="PT_Hamamatsu" value="Hamamatsu" onchange="ChangePT()"> Hamamatsu
+				</label>
+			</div>
+		</div>	
+
+		<div class="am-form-group">
             <label for="SN" class="am-u-sm-3 am-form-label">Serial Number</label>
             <div class="am-u-sm-9">
-                <input type="text" name="SN" id="SN" placeholder="Serial Number" onkeyup="queryStage()" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}" >
+                <input type="text" name="SN" id="SN" placeholder="Serial Number" onkeyup="queryStage()"  >
                 <small>Serial Number is the ID of a PMT.</small>
             </div>
         </div>
@@ -58,13 +45,6 @@
             <div class="am-u-sm-9">
                 <input type="text" name="SW" id="SW" placeholder="Storage Workers" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
                 <!--<small>邮箱你懂得...</small>-->
-            </div>
-        </div>
-
-        <div class="am-form-group">
-            <label for="SD" class="am-u-sm-3 am-form-label"><!--Storage Date --!>            </label>
-            <div class="am-u-sm-9">
-                <!-- <input type="text" name="SD" id="SD"  readonly/> --!><!--onfocus="WdatePicker({lang:'en',dateFmt:'yyyy-mm-dd'})"-->
             </div>
         </div>
 
@@ -106,11 +86,20 @@
     </form>
 </div>
 <div class="am-u-sm-12 am-u-md-6">
-    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">The latest 12 records </strong></div>
-    <div id="tablelist">
-        <!-- ajax会填充表格代码 -->
-        <ul></ul>
-    </div>
+    <div id="NRecord" class="am-fl am-cf"><strong class="am-text-primary am-text-lg">The latest 12 records </strong></div>
+    <div id="HRecord" class="am-fl am-cf" hidden><strong class="am-text-primary am-text-lg">The latest 8 records </strong></div>
+	<table class="am-table am-table-striped am-table-hover table-main">
+		<tr>
+			<th width="10">NO</th>
+			<th width="60">SN</th>
+			<th width="60">SD</th>
+			<th width="60">Location</th>
+			<th width="10"></th>
+		</tr>
+		<tbody id="tablelist">
+			<!-- ajax会填充表格代码 -->
+		</tbody>
+	</table>
 </div>
 
 </div>
@@ -127,6 +116,7 @@
 <script src="assets/js/junocheck.js"></script>
 <script src="assets/js/SShistory10.js"></script>
 <script language="javascript">
+	var n = 12 ;
     window.onload=function(){
 //定时器每秒调用一次fnDate()
         setInterval(function(){
@@ -184,7 +174,7 @@
             document.getElementById("SR").value=json;
 
         }
-    })
+    });
     $.ajax({
 
         url:'backend/SW.php',
@@ -195,10 +185,44 @@
             document.getElementById("SW").value=json;
 
         }
-    })
+    });
+	$("#SN").keydown(function(event){
+		if(event.keyCode==13)
+		{
+			var SN = $(this).val();
+			var SD = SN;
+			var LCA = SN;
+			var m = $("#tablelist>tr").length + 1;
+			if ( m < (n+1) ) 
+			{
+				if ( $("#"+SN).length == 0 )
+				{
+					table_html = "<tr id=" + SN+ "><td width=\"10\">" + m + "</td><td width=\"60\">" + SN + "</td><td width=\"60\">" + SD + "</td><td width=\"60\">" + LCA + "</td><td width=\"10\"><a href=\"javascript:void(0)\" class=\"am-icon-trash\" onclick=\"DelRow(this)\"></a></td></tr>";
+					$("#tablelist").append(table_html);
+				}
+			}else
+			{
+				alert("Package is ready. Please click \"Save\" botton");
+			}
+			$(this).val("");
+			return false;
+		}
+	});
 
+    function DelRow(obj){
+		var ID = $(obj).parent().parent().attr("id");
+		$("#"+ID).remove();
+		var k = $("#tablelist>tr").length;
+		var i = 0;
+		for ( i = 0; i < k; i++ )
+		{
+			var j = i+1;
+			$("#tablelist tr:eq(" + i + ") td:first").text(j);
 
-    function queryStage() {
+		};	
+	};
+	
+	function queryStage() {
         var sn= document.getElementById("SN").value;
         // alert(sn);
         // $.getJSON("backend/chuli1.php",{SN:sn},function(json){
@@ -220,6 +244,21 @@
 
     }
 
+	function ChangePT(){
+		if($("#PT_NNVT").prop("checked"))
+		{
+			$("#NRecord").show();
+			$("#HRecord").hide();
+			n = 12;
+			$("#tablelist").html("");
+		}else
+		{
+			$("#NRecord").hide();
+			$("#HRecord").show();
+			n = 8;
+			$("#tablelist").html("");
+		};
+	}
 </script>
 </body>
 </html>
