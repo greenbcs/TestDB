@@ -8527,7 +8527,7 @@ img.am-thumbnail,
   z-index: 1020;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 40px;
   padding: 15px;
   margin: 9px 0 0;
   text-align: left;

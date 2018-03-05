@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta charset="UTF-8">
     <title>JUNO PMT DB SYSTEM</title>
     <html>
     <head lang="en">
@@ -121,7 +122,7 @@ function Login(){
                          SYSU=array['SYSU'];
                          linkIP=array['linkIP']; });
                         if (SYSU==4){
-                            window.location.href=linkIP;
+                            window.location.href="Home.html#";
                         }
                         else if(SYSU==2){
                             alert("Login failed!The username or password is wrong");
@@ -145,6 +146,9 @@ function Login(){
     function docdb(){
         alert("Now we don't support DocDB account to login our database!");
     }
+	
+	$('#username').focus();
+
 
 </script>
 </body>
