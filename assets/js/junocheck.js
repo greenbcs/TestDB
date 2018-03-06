@@ -19,7 +19,6 @@ $.ajax({
             junolevel[index]=array['LEVEL'];
 
         });
-        console.log(junoname);
         if (junoname=="QWVB"||junolevel==99||junoname==""||junolevel==""||junoname.length==0||junolevel.length==0){
             alert("Login failed!The username or password is wrong！");
             window.location.href="index.html";
@@ -27,16 +26,16 @@ $.ajax({
         else{
             //var dbslevel=myFun(junoname,junolevel);
             //返回上一页并本地刷新
-            myFun(junoname,junolevel)//该函数把查询到的用户名传递到页面中，主要是Users Profiles。
+			$("#IDlabel").html(junoname);//在右上角显示用户名
+			//console.log(junoname);
+            myFun(junoname,junolevel);//该函数把查询到的用户名传递到页面中，主要是Users Profiles。
             if(junolevel<DBSgrade){alert('Your authorization or permissions are too low to access the page.');history.go(-1);};//location.reload();本地刷新
         }
     },
     error: function () {
         alert("Login failed!The username or password is wrong！");
         window.location.href="index.html";}
-}
-
-);
+});
 
 function myFun(junoname,junolevel){
      myParames1=junoname;

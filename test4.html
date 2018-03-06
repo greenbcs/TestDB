@@ -1,0 +1,60 @@
+<span style="font-size:24px;"><!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>Insert title here</title>  
+</head>  
+<script type="text/javascript">  
+  
+function addInput(){
+	var propstr = "高度:180cm|高度:180cm|高度:180cm|高度:180cm|高度:180cm|高度:180cm|高度:180cm";  
+	var status = "1";  
+	var ary = propstr.split("|");  
+	var content = "";  
+	for(i=0;i<ary.length;i++){  
+		var obj = document.getElementById("add");  
+		var inputFile = document.createElement("input");  
+		var inputId = "input_"+i;  
+		var deleteId = "delete_"+i;  
+		inputFile.setAttribute("type","text");  
+		inputFile.setAttribute("name","prop"); 
+	    inputFile.setAttribute("placeholder",i);	
+		//inputFile.setAttribute("value",ary[i]);  
+		inputFile.setAttribute("id",inputId);  
+		if("0"==status){  
+			inputFile.readOnly = true;  
+			var p = document.createElement("p");  
+			obj.appendChild(inputFile);  
+			obj.appendChild(p);  
+			}else if("1"==status){  
+				var del = document.createElement("input");    
+				del.setAttribute("type","button");    
+				del.setAttribute("value","删除");   
+				del.setAttribute("id",deleteId);  
+				var p = document.createElement("p");  
+				obj.appendChild(inputFile);  
+				obj.appendChild(del);  
+				obj.appendChild(p);  
+				del.onclick = function(){  //绑定事件，传递当前对象                             
+					deleteInput(this);  
+				}     
+			}  
+		}  
+};
+   
+function deleteInput(obj) {  
+	var id = obj.id;  
+	var count = id.charAt(id.length - 1);  
+	var deleteObj = document.getElementById(id);  
+	var inputObj = document.getElementById("input_"+count);  
+	var parentObj = document.getElementById("add");  
+	parentObj.removeChild(deleteObj);  
+	parentObj.removeChild(inputObj);  
+};  
+</script> 
+<script src="assets/js/app.js"></script>
+<body onload="addInput();">  
+    <div id="add"></div>  
+</body>  
+</html>
+</span>  

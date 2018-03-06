@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072f3a22-88c3-4981-a12d-041bd93db013" name="Default" comment="" />
+    <list default="true" id="072f3a22-88c3-4981-a12d-041bd93db013" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Home.html" afterPath="$PROJECT_DIR$/Home.html" />
+      <change beforePath="$PROJECT_DIR$/PMTs-storage.html" afterPath="$PROJECT_DIR$/PMTs-storage.html" />
+      <change beforePath="$PROJECT_DIR$/assets/css/amazeui.css" afterPath="$PROJECT_DIR$/assets/css/amazeui.css" />
+      <change beforePath="$PROJECT_DIR$/assets/css/amazeui.flat.css" afterPath="$PROJECT_DIR$/assets/css/amazeui.flat.css" />
+      <change beforePath="$PROJECT_DIR$/assets/css/amazeui.flat.min.css" afterPath="$PROJECT_DIR$/assets/css/amazeui.flat.min.css" />
+      <change beforePath="$PROJECT_DIR$/assets/css/amazeui.min.css" afterPath="$PROJECT_DIR$/assets/css/amazeui.min.css" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/lang/en.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/lang/zh-cn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/lang/zh-tw.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/readme.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/WdatePicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/datePicker.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/default/datepicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/default/img.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/whyGreen/bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/whyGreen/datepicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/datepicker/寮€鍙戝寘/skin/whyGreen/img.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/js/SShistory10.js" afterPath="$PROJECT_DIR$/assets/js/SShistory10.js" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/assets/js/junocheck.js" afterPath="$PROJECT_DIR$/assets/js/junocheck.js" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/receive-check-statistics.html" afterPath="$PROJECT_DIR$/receive-check-statistics.html" />
+    </list>
     <ignored path="juno.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -12,21 +38,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="juno" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="1200">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -35,11 +59,9 @@
       <file leaf-file-name="delete_pmtuser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/delete_pmtuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="20" column="136" selection-start-line="20" selection-start-column="136" selection-end-line="20" selection-end-column="136" />
-              <folding>
-                <marker date="1518130386012" expanded="true" signature="233:280" placeholder="delete from ..." />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="20" column="136" lean-forward="false" selection-start-line="20" selection-start-column="136" selection-end-line="20" selection-end-column="136" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,23 +69,82 @@
       <file leaf-file-name="uploadexcel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/uploadexcel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="21" column="145" selection-start-line="21" selection-start-column="145" selection-end-line="21" selection-end-column="145" />
+            <state relative-caret-position="315">
+              <caret line="21" column="145" lean-forward="false" selection-start-line="21" selection-start-column="145" selection-end-line="21" selection-end-column="145" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20942408">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="-1470">
+              <caret line="64" column="290" lean-forward="false" selection-start-line="64" selection-start-column="290" selection-end-line="64" selection-end-column="290" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1518125890674" expanded="true" signature="1067:1176" placeholder="..." />
+                <marker date="1520323469773" expanded="true" signature="1113:1222" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cross.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cross.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+              <folding>
+                <marker date="1520323849071" expanded="true" signature="1041:1150" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PMTs-Storage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/PMTs-Storage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+              <folding>
+                <marker date="1520318210207" expanded="true" signature="236:262" ph="select * fro... pmts_storage" />
+                <marker date="1520318210207" expanded="true" signature="395:465" ph="select * fro... pmts_storage" />
+                <marker date="1520318210207" expanded="true" signature="869:912" ph="select * fro... receive_check" />
+                <marker date="1520318210207" expanded="true" signature="1269:1413" ph="insert into pmts_storage_logs... " />
+                <marker date="1520318210207" expanded="true" signature="1426:1683" ph="insert into pmts_storage... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagesurfacegeometry.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/pagesurfacegeometry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1520318209894" expanded="true" signature="253:283" ph="select * fro... surface_geometry" />
+                <marker date="1520318209894" expanded="true" signature="608:673" ph="select * fro... surface_geometry" />
+                <marker date="1520318209894" expanded="true" signature="739:769" ph="select * fro... surface_geometry" />
+                <marker date="1520318209894" expanded="true" signature="1094:1158" ph="select * fro... surface_geometry" />
+                <marker date="1520318209894" expanded="true" signature="1225:1274" ph="select * fro... surface_geometry" />
+                <marker date="1520318209894" expanded="true" signature="1599:1681" ph="select * fro... surface_geometry" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Receive-Check.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/Receive-Check.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="57" column="139" lean-forward="false" selection-start-line="57" selection-start-column="139" selection-end-line="57" selection-end-column="139" />
+              <folding>
+                <marker date="1520318243398" expanded="true" signature="241:268" ph="select * fro... receive_check" />
+                <marker date="1520318243398" expanded="true" signature="422:494" ph="select * fro... receive_check" />
+                <marker date="1520318243398" expanded="true" signature="917:1043" ph="insert into receive_check... " />
+                <marker date="1520318243398" expanded="true" signature="1227:1268" ph="select * fro... hamamatsudbt" />
+                <marker date="1520318243398" expanded="true" signature="1334:1370" ph="select * fro... nnvtdbt" />
               </folding>
             </state>
           </provider>
@@ -72,8 +153,8 @@
       <file leaf-file-name="receivestatistics.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/receivestatistics.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -82,37 +163,8 @@
       <file leaf-file-name="receivecheckmapping.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/receivecheckmapping.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125">
-              <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
-              <folding>
-                <marker date="1518136393227" expanded="true" signature="159:180" placeholder="select * fro..nnvtdbt..." />
-                <marker date="1518136393227" expanded="true" signature="313:339" placeholder="select * fro..hamamatsudbt..." />
-                <marker date="1518136393227" expanded="true" signature="480:523" placeholder="select * fro..receive_check..." />
-                <marker date="1518136393227" expanded="true" signature="658:706" placeholder="select * fro..receive_check..." />
-                <marker date="1518136393227" expanded="true" signature="1011:1366" placeholder="select DATE_..receive_check..." />
-                <marker date="1518136393227" expanded="true" signature="1935:2135" placeholder="select DATE_..receive_check..." />
-                <marker date="1518136393227" expanded="true" signature="2199:2298" placeholder="select Trans..transport_statistics..." />
-                <marker date="1518136393227" expanded="true" signature="2362:2456" placeholder="select Trans..transport_statistics..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uploadexcel1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/uploadexcel1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5">
-              <caret line="19" column="193" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conn.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/conn.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="330">
+              <caret line="22" column="128" lean-forward="false" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -129,10 +181,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/query-Hamamatsu.html" />
         <option value="$PROJECT_DIR$/query-NNVT.html" />
         <option value="$PROJECT_DIR$/query-receive.html" />
         <option value="$PROJECT_DIR$/query-sampling-scan-station.html" />
@@ -165,7 +219,6 @@
         <option value="$PROJECT_DIR$/backend/login.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/backend/conn.php" />
-        <option value="$PROJECT_DIR$/Home.html" />
         <option value="$PROJECT_DIR$/receive-check-statistics.html" />
         <option value="$PROJECT_DIR$/backend/uploadcsv.php" />
         <option value="$PROJECT_DIR$/backend/surface-gepmetry.php" />
@@ -183,15 +236,16 @@
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/assets/js/receivestatistics.js" />
         <option value="$PROJECT_DIR$/backend/receivecheckmapping.php" />
+        <option value="$PROJECT_DIR$/Home.html" />
+        <option value="$PROJECT_DIR$/cross.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-  </component>
-  <component name="NamedScopeManager">
-    <order />
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpServers">
     <servers />
@@ -199,21 +253,12 @@
   <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1337" />
-    <option name="y" value="275" />
+    <option name="x" value="1763" />
+    <option name="y" value="23" />
     <option name="width" value="1436" />
     <option name="height" value="717" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -225,75 +270,27 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juno" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juno" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juno" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juno" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juno" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="juno" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestDB" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="juno" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestDB" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -311,6 +308,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -343,16 +352,18 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -361,9 +372,14 @@
       <changelist id="072f3a22-88c3-4981-a12d-041bd93db013" name="Default" comment="" />
       <created>1504873520481</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1504873520481</updated>
+      <workItem from="1520320287671" duration="1238000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1238000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,50 +391,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1337" y="275" width="1436" height="717" extended-state="0" />
+    <frame x="1763" y="23" width="1436" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23816356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32524273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24175036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32524273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29956332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29956332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -438,578 +458,398 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/pagesIOL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/junocheck.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15075377">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_access_logs..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers_login_logs..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers_login_logs..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers_login_logs..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers_login_logs..." />
-            <marker date="1518123554609" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/nnvtstatistics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1959798">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52879584">
-          <caret line="119" column="58" selection-start-line="119" selection-start-column="58" selection-end-line="119" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="119" column="58" lean-forward="false" selection-start-line="119" selection-start-column="58" selection-end-line="119" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/receive-check-statistics.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34031415">
-          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1518128228862" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="45" column="76" lean-forward="false" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/Logout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/WRhistory10.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="select NO,RD..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/WHR.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="select WHR f..receive_check..." />
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="select WHR f..receive_check..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/visualcheckmapping.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1937172">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select DATE_..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select DATE_..surface_geometry_conclution..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select Bubbl..surface_geometry..." />
-            <marker date="1518028036919" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin-sets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518084304638" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/surface-geometry.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518084304770" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/uploadcsv.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="53" column="153" selection-start-line="53" selection-start-column="153" selection-end-line="53" selection-end-column="153" />
-          <folding>
-            <marker date="1518130213257" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518130213257" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518130213257" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518130213257" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="53" column="153" lean-forward="false" selection-start-line="53" selection-start-column="153" selection-end-line="53" selection-end-column="153" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/SW.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select * fro..pmts_storage..." />
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select SW fr..pmts_storage..." />
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select SW fr..pmts_storage..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/surface-gepmetry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7068063">
-          <caret line="117" column="153" selection-start-line="117" selection-start-column="153" selection-end-line="117" selection-end-column="153" />
-          <folding>
-            <marker date="1518130213212" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518130213212" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518130213212" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518130213212" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="117" column="153" lean-forward="false" selection-start-line="117" selection-start-column="153" selection-end-line="117" selection-end-column="153" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/SR.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select * fro..pmts_storage..." />
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select SR fr..pmts_storage..." />
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select SR fr..pmts_storage..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/SShistory10.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036881" expanded="true" signature="-1:-1" placeholder="select NO,SN..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/SNVCD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036880" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/SNVCD1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036880" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518028036880" expanded="true" signature="-1:-1" placeholder="select DATE ..." />
-            <marker date="1518028036880" expanded="true" signature="-1:-1" placeholder="select DATE ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/record_illegal_operation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41884816">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <marker date="1518028036915" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_illegal_operation_logs..." />
-            <marker date="1518028036915" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_illegal_operation_logs..." />
-            <marker date="1518028036915" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Receive-Check.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.916666">
-          <caret line="57" column="139" selection-start-line="57" selection-start-column="139" selection-end-line="57" selection-end-column="139" />
-          <folding>
-            <marker date="1518130213191" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
-            <marker date="1518130213191" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
-            <marker date="1518130213191" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518130213191" expanded="true" signature="-1:-1" placeholder="select * fro..hamamatsudbt..." />
-            <marker date="1518130213191" expanded="true" signature="-1:-1" placeholder="select * fro..nnvtdbt..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/publishnotice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375">
-          <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
-          <folding>
-            <marker date="1518130213242" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_notice_logs..." />
-            <marker date="1518130213242" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_notice_logs..." />
-            <marker date="1518130213242" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/PMTs-Storage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.625">
-          <caret line="41" column="113" selection-start-line="41" selection-start-column="113" selection-end-line="41" selection-end-column="113" />
-          <folding>
-            <marker date="1518130296785" expanded="true" signature="-1:-1" placeholder="select * fro..pmts_storage..." />
-            <marker date="1518130296785" expanded="true" signature="-1:-1" placeholder="select * fro..pmts_storage..." />
-            <marker date="1518130296785" expanded="true" signature="-1:-1" placeholder="select * fro..receive_check..." />
-            <marker date="1518130296785" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518130296785" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518130296785" expanded="true" signature="-1:-1" placeholder="UPDATE SN='$..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="31" column="99" lean-forward="false" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/pageusers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.5">
-          <caret line="63" column="136" selection-start-line="63" selection-start-column="136" selection-end-line="63" selection-end-column="136" />
-          <folding>
-            <marker date="1518130296796" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers..." />
-            <marker date="1518130296796" expanded="true" signature="-1:-1" placeholder="select NO,Us..." />
-            <marker date="1518130296796" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers..." />
-            <marker date="1518130296796" expanded="true" signature="-1:-1" placeholder="select NO,Us..." />
-            <marker date="1518130296796" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers..." />
-            <marker date="1518130296796" expanded="true" signature="-1:-1" placeholder="select NO,Us..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="63" column="136" lean-forward="false" selection-start-line="63" selection-start-column="136" selection-end-line="63" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/pagesurfacegeometrystatistics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="29.25">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry_conclution..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pagesurfacegeometry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-            <marker date="1518028036914" expanded="true" signature="-1:-1" placeholder="select * fro..surface_geometry..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/NOTICE.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036879" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_notice_logs..." />
-            <marker date="1518028036879" expanded="true" signature="-1:-1" placeholder="select Notic..pmtdb_notice_logs..." />
-            <marker date="1518028036879" expanded="true" signature="-1:-1" placeholder="select Notic..pmtdb_notice_logs..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/nnvtstatistics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036910" expanded="true" signature="-1:-1" placeholder="select NO,NQ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/modifyword.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036909" expanded="true" signature="-1:-1" placeholder="update data_..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/Logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/junocheck.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <marker date="1518122018762" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_access_logs..." />
-            <marker date="1518122018762" expanded="true" signature="-1:-1" placeholder="select * fro..pmtdb_access_logs..." />
-            <marker date="1518122018762" expanded="true" signature="-1:-1" placeholder="select Level..pmtusers..." />
-            <marker date="1518122018762" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518122018762" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518122018762" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/hamamatsustatistics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036908" expanded="true" signature="-1:-1" placeholder="select NO,SN..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/function1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="51.125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518084304724" expanded="true" signature="-1:-1" placeholder="select * fro..nnvtdbt..." />
-            <marker date="1518084304724" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1518084304724" expanded="true" signature="-1:-1" placeholder="select * fro..transport_statistics..." />
-            <marker date="1518084304724" expanded="true" signature="-1:-1" placeholder="select * fro..transport_statistics..." />
-            <marker date="1518084304724" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/download_pmttable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036906" expanded="true" signature="-1:-1" placeholder="Select * fro..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/adduser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.34031415">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers..." />
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="select * fro..pmtusers..." />
-            <marker date="1518028036882" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/addword.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036883" expanded="true" signature="-1:-1" placeholder="select * fro..data_dictionary..." />
-            <marker date="1518028036883" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/checkpmt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036883" expanded="true" signature="-1:-1" placeholder="select NO fr..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/chuli2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036884" expanded="true" signature="-1:-1" placeholder="select Stage..pmts_storage..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/chuli1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518028036883" expanded="true" signature="-1:-1" placeholder="select SP fr..pmts_storage..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/databasebackup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8062827">
-          <caret line="59" column="136" selection-start-line="59" selection-start-column="136" selection-end-line="59" selection-end-column="136" />
-          <folding>
-            <marker date="1518130623134" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1518130623134" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="59" column="136" lean-forward="false" selection-start-line="59" selection-start-column="136" selection-end-line="59" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/delete_pmtrc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4973822">
-          <caret line="19" column="140" selection-start-line="19" selection-start-column="140" selection-end-line="19" selection-end-column="140" />
-          <folding>
-            <marker date="1518130508239" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="19" column="140" lean-forward="false" selection-start-line="19" selection-start-column="140" selection-end-line="19" selection-end-column="140" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/delete_pmtstorage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4973822">
-          <caret line="19" column="136" selection-start-line="19" selection-start-column="136" selection-end-line="19" selection-end-column="136" />
-          <folding>
-            <marker date="1518130478039" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="19" column="136" lean-forward="false" selection-start-line="19" selection-start-column="136" selection-end-line="19" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/delete_pmtsurfacegeometry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60209423">
-          <caret line="23" column="136" selection-start-line="23" selection-start-column="136" selection-end-line="23" selection-end-column="136" />
-          <folding>
-            <marker date="1518130444087" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1518130444087" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="23" column="136" lean-forward="false" selection-start-line="23" selection-start-column="136" selection-end-line="23" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/uploadexcel1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5">
-          <caret line="19" column="193" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
+        <state relative-caret-position="285">
+          <caret line="19" column="193" lean-forward="false" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/conn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="75">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/uploadexcel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="21" column="145" selection-start-line="21" selection-start-column="145" selection-end-line="21" selection-end-column="145" />
+        <state relative-caret-position="315">
+          <caret line="21" column="145" lean-forward="false" selection-start-line="21" selection-start-column="145" selection-end-line="21" selection-end-column="145" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/delete_pmtuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="20" column="136" selection-start-line="20" selection-start-column="136" selection-end-line="20" selection-end-column="136" />
-          <folding>
-            <marker date="1518130386012" expanded="true" signature="233:280" placeholder="delete from ..." />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="136" lean-forward="false" selection-start-line="20" selection-start-column="136" selection-end-line="20" selection-end-column="136" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="1200">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/receivestatistics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+        <state relative-caret-position="1125">
+          <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/receivecheckmapping.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
+        <state relative-caret-position="330">
+          <caret line="22" column="128" lean-forward="false" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/Receive-Check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="57" column="139" lean-forward="false" selection-start-line="57" selection-start-column="139" selection-end-line="57" selection-end-column="139" />
           <folding>
-            <marker date="1518136393227" expanded="true" signature="159:180" placeholder="select * fro..nnvtdbt..." />
-            <marker date="1518136393227" expanded="true" signature="313:339" placeholder="select * fro..hamamatsudbt..." />
-            <marker date="1518136393227" expanded="true" signature="480:523" placeholder="select * fro..receive_check..." />
-            <marker date="1518136393227" expanded="true" signature="658:706" placeholder="select * fro..receive_check..." />
-            <marker date="1518136393227" expanded="true" signature="1011:1366" placeholder="select DATE_..receive_check..." />
-            <marker date="1518136393227" expanded="true" signature="1935:2135" placeholder="select DATE_..receive_check..." />
-            <marker date="1518136393227" expanded="true" signature="2199:2298" placeholder="select Trans..transport_statistics..." />
-            <marker date="1518136393227" expanded="true" signature="2362:2456" placeholder="select Trans..transport_statistics..." />
+            <marker date="1520318243398" expanded="true" signature="241:268" ph="select * fro... receive_check" />
+            <marker date="1520318243398" expanded="true" signature="422:494" ph="select * fro... receive_check" />
+            <marker date="1520318243398" expanded="true" signature="917:1043" ph="insert into receive_check... " />
+            <marker date="1520318243398" expanded="true" signature="1227:1268" ph="select * fro... hamamatsudbt" />
+            <marker date="1520318243398" expanded="true" signature="1334:1370" ph="select * fro... nnvtdbt" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/PMTs-Storage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+          <folding>
+            <marker date="1520318210207" expanded="true" signature="236:262" ph="select * fro... pmts_storage" />
+            <marker date="1520318210207" expanded="true" signature="395:465" ph="select * fro... pmts_storage" />
+            <marker date="1520318210207" expanded="true" signature="869:912" ph="select * fro... receive_check" />
+            <marker date="1520318210207" expanded="true" signature="1269:1413" ph="insert into pmts_storage_logs... " />
+            <marker date="1520318210207" expanded="true" signature="1426:1683" ph="insert into pmts_storage... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/pagesurfacegeometry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520318209894" expanded="true" signature="253:283" ph="select * fro... surface_geometry" />
+            <marker date="1520318209894" expanded="true" signature="608:673" ph="select * fro... surface_geometry" />
+            <marker date="1520318209894" expanded="true" signature="739:769" ph="select * fro... surface_geometry" />
+            <marker date="1520318209894" expanded="true" signature="1094:1158" ph="select * fro... surface_geometry" />
+            <marker date="1520318209894" expanded="true" signature="1225:1274" ph="select * fro... surface_geometry" />
+            <marker date="1520318209894" expanded="true" signature="1599:1681" ph="select * fro... surface_geometry" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20942408">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="-1470">
+          <caret line="64" column="290" lean-forward="false" selection-start-line="64" selection-start-column="290" selection-end-line="64" selection-end-column="290" />
           <folding>
             <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1518125890674" expanded="true" signature="1067:1176" placeholder="..." />
+            <marker date="1520323469773" expanded="true" signature="1113:1222" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cross.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+          <folding>
+            <marker date="1520323849071" expanded="true" signature="1041:1150" ph="..." />
           </folding>
         </state>
       </provider>
