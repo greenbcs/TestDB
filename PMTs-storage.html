@@ -1,106 +1,117 @@
-<!doctype html>
 <html class="no-js fixed-layout">
-
 <body>
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
     以获得更好的体验！</p>
 <![endif]-->
 <!--from here-->
-<div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
-    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg"> The PMTs' track in warehouse </strong><small class="am-text-primary am-text-lg">(PMTs Storage System)</small></div>
-</div>
-<p></p>
-<div class="am-u-sm-12 am-u-md-6">
-    <form class="am-form am-form-horizontal" name="RCForm" id="PSForm" method="GET" onsubmit="return toVaild()" action="backend/PMTs-Storage.php" >
-	    <div class="am-form-group">
-		    <label for="" class="am-u-sm-3 am-form-label">PMT Type</label>
+<div class="am-g">
+	<div class="am-cf am-padding" style="border-bottom: 1px solid #eee;">
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg"> The PMTs' track in warehouse </strong><small class="am-text-primary am-text-lg">(PMTs Storage System)</small></div>
+	</div>
+	<p></p>
+	<div class="am-u-sm-12 am-u-md-6">
+		<form class="am-form am-form-horizontal" name="RCForm" id="PSForm" method="POST" onsubmit="javascript:return Valid_Save()" action="backend/PMTs-Storage.php">
+	<!--	<form class="am-form am-form-horizontal" name="RCForm" id="PSForm" method="GET" onsubmit="return Valid_Save()" action="backend/PMTs-Storage.php" >-->
 			<div class="am-form-group">
-				<label class="am-radio-inline">
-					<input type="radio" name="PT" id="PT_NNVT" value="NNVT" checked="checked" onchange="ChangePT()" > NNVT
-				</label>
-				<label class="am-radio-inline">
-					<input type="radio" name="PT" id="PT_Hamamatsu" value="Hamamatsu" onchange="ChangePT()"> Hamamatsu
-				</label>
+				<label class="am-u-sm-3 am-form-label">PMT Type</label>
+				<div class="am-form-group">
+					<label class="am-radio-inline">
+						<input type="radio" name="PT" id="PT_NNVT" value="NNVT" checked="checked" onchange="ChangePT()" > NNVT
+					</label>
+					<label class="am-radio-inline">
+						<input type="radio" name="PT" id="PT_Hamamatsu" value="Hamamatsu" onchange="ChangePT()"> Hamamatsu
+					</label>
+				</div>
+			</div>	
+
+			<div class="am-form-group">
+				<label for="SN" class="am-u-sm-3 am-form-label am-text-warning">Serial Number</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="SN" id="SN" placeholder="Serial Number" onkeyup="query(value)"/>
+					<small>Serial Number is the ID of a PMT.</small><br>
+					<div id="Scanned">
+					</div>
+				</div>
 			</div>
-		</div>	
 
-		<div class="am-form-group">
-            <label for="SN" class="am-u-sm-3 am-form-label">Serial Number</label>
-            <div class="am-u-sm-9">
-                <input type="text" name="SN" id="SN" placeholder="Serial Number" onkeyup="queryStage()"  >
-                <small>Serial Number is the ID of a PMT.</small>
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="BN" class="am-u-sm-3 am-form-label">Batch Number</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="BN" id="BN" placeholder="Batch Number" readonly onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+					<!--<small>邮箱你懂得...</small>-->
+				</div>
+			</div>
 
-        <div class="am-form-group">
-            <label for="SR" class="am-u-sm-3 am-form-label">Storage Recorder</label>
-            <div class="am-u-sm-9">
-                <input type="text" name="SR" id="SR" placeholder="Storage Recorder" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-                <!--<small>邮箱你懂得...</small>-->
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="SR" class="am-u-sm-3 am-form-label">Storage Recorder</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="SR" id="SR" placeholder="Storage Recorder" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+					<!--<small>邮箱你懂得...</small>-->
+				</div>
+			</div>
 
-        <div class="am-form-group">
-            <label for="SW" class="am-u-sm-3 am-form-label">Storage Workers</label>
-            <div class="am-u-sm-9">
-                <input type="text" name="SW" id="SW" placeholder="Storage Workers" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
-                <!--<small>邮箱你懂得...</small>-->
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="SW" class="am-u-sm-3 am-form-label">Storage Workers</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="SW" id="SW" placeholder="Storage Workers" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}"/>
+					<!--<small>邮箱你懂得...</small>-->
+				</div>
+			</div>
 
-        <div class="am-form-group">
-            <label for="SP" class="am-u-sm-3 am-form-label">Storage Position</label>
-            <div class="am-u-sm-9">
-                <input type="text" name="SP" id="SP" placeholder="Storage Position" onkeyup="OnPropChanged()" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                <small>Please use scanner input this!</small>
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="SP" class="am-u-sm-3 am-form-label am-text-warning">Storage Position</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="SP" id="SP" placeholder="Storage Position" onkeyup="OnPropChanged()" onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+					<small>Please use scanner input this!</small>
+				</div>
+			</div>
 
-        <div class="am-form-group">
-            <label for="Status" class="am-u-sm-3 am-form-label">Location</label>
-            <div class="am-u-sm-9">
-                <input type="text" name="Status" id="Status" placeholder="Location" readonly onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="Status" class="am-u-sm-3 am-form-label">Location</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="Status" id="Status" placeholder="Location" readonly onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+				</div>
+			</div>
 
-        <div class="am-form-group">
-            <label for="Stage" class="am-u-sm-3 am-form-label">Now Stage</label>
-            <div class="am-u-sm-9">
-                <input type="text" name="Stage" id="Stage" placeholder="Now Stage"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
-                <small>You needn't to change this value in most time!</small>
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="Stage" class="am-u-sm-3 am-form-label">Now Stage</label>
+				<div class="am-u-sm-9">
+					<input type="text" name="Stage" id="Stage" placeholder="Now Stage"  onkeydown="if(event.keyCode==13){event.keyCode=0;event.returnValue=false;}">
+					<small>You needn't to change this value in most time!</small>
+				</div>
+			</div>
 
-        <div class="am-form-group">
-            <label for="SNote" class="am-u-sm-3 am-form-label">Storage Note</label>
-            <div class="am-u-sm-9">
-                <textarea class="" rows="3" name="SNote" id="SNote" placeholder="Input..."></textarea>
-                <!-- <small>250字以内写出你的一生...</small>-->
-            </div>
-        </div>
+			<div class="am-form-group">
+				<label for="SNote" class="am-u-sm-3 am-form-label">Storage Note</label>
+				<div class="am-u-sm-9">
+					<textarea class="" rows="3" name="SNote" id="SNote" placeholder="Input..."></textarea>
+					<!-- <small>250字以内写出你的一生...</small>-->
+				</div>
+			</div>
 
-        <div class="am-u-sm-6 am-fr" >
-            <input type="submit" class="am-btn am-btn-primary am-btn-xl" value="--->Save Data<---">
-            <p></p>
-        </div>
-    </form>
-</div>
-<div class="am-u-sm-12 am-u-md-6">
-    <div id="NRecord" class="am-fl am-cf"><strong class="am-text-primary am-text-lg">The latest 12 records </strong></div>
-    <div id="HRecord" class="am-fl am-cf" hidden><strong class="am-text-primary am-text-lg">The latest 8 records </strong></div>
-	<table class="am-table am-table-striped am-table-hover table-main">
-		<tr>
-			<th width="10">NO</th>
-			<th width="60">SN</th>
-			<th width="60">SD</th>
-			<th width="60">Location</th>
-			<th width="10"></th>
-		</tr>
-		<tbody id="tablelist">
+			<input type="hidden" name="SNs" id="SNs">
+
+			<div id="Submit2DB" class="am-u-sm-6 am-fr">
+				<input type="submit" class="am-btn am-btn-primary am-btn-xl" value="--->Save Data<---">
+			</div>
+		</form>
+	</div>
+
+	<div class="am-u-sm-12 am-u-md-6">
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">The latest 12 records </strong></div>
+		<table class="am-table am-table-striped am-table-hover table-main">
+			<tr>
+				<th width="10%">NO</th>
+				<th width="40%">SN</th>
+				<th width="40%">SP</th>
+				<th width="10%">BN</th>
+			</tr>
+			<tbody id="tofill">
 			<!-- ajax会填充表格代码 -->
-		</tbody>
-	</table>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 <input type="hidden" name="DBSlevel" id="DBSlevel" value="2">
@@ -110,25 +121,6 @@
 <script src="assets/js/SShistory10.js"></script>
 <script language="javascript">
 	var n = 12 ;
-    window.onload=function(){
-//定时器每秒调用一次fnDate()
-        setInterval(function(){
-            fnDate();
-        },1000);
-    }
-    function fnDate() {
-
-        var d = new Date();
-
-        function addzero(v) {
-            if (v < 10) return '0' + v;
-            return v.toString();
-        }
-
-        var s = d.getFullYear().toString() + '-' + addzero(d.getMonth() + 1) + '-' + addzero(d.getDate()) + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
-
-        document.getElementById('SD').value = s;
-    }
 
     function OnPropChanged() {
 
@@ -138,104 +130,84 @@
         var result3 = strs[0];
         document.getElementById("Status").value =result3;
     }
-    function toVaild(){
-        var val1 = document.getElementById("SN").value;
-        var val2 = document.getElementById("SR").value;
-        var val3 = document.getElementById("SW").value;
-        var val4 = document.getElementById("SD").value;
-        var val5 = document.getElementById("SP").value;
-        var val6 = document.getElementById("Status").value;
-        var val7 = document.getElementById("Stage").value;
-        //允许备注置空
-        //alert(val);
-        if(val1 == ""||val2==""||val3==""||val4==""||val5==""||val6==""||val7==""){
-            alert("Something is empty!");
-            return false;
-        }
-        else{
-            //alert("ok");
-            return true;
-        }
-    }
-    $.ajax({
 
-        url:'backend/SR.php',
-        dataType:'text',
-        type:'POST',
-        //data:{'SN':a},
-        success: function(json) {
-            document.getElementById("SR").value=json;
-
-        }
-    });
-    $.ajax({
-
-        url:'backend/SW.php',
-        dataType:'text',
-        type:'POST',
-        //data:{'SN':a},
-        success: function(json) {
-            document.getElementById("SW").value=json;
-
-        }
-    });
-	$("#SN").keydown(function(event){
-		if(event.keyCode==13)
+    function Valid_Save(){
+		var val1 = new Array();
+		for ( var i = 0 ; i < $("#Scanned label").length; i++)
 		{
-			var SN = $(this).val();
-			var SD = SN;
-			var LCA = SN;
-			var m = $("#tablelist>tr").length + 1;
-			if ( m < (n+1) ) 
-			{
-				if ( $("#"+SN).length == 0 )
-				{
-					table_html = "<tr id=" + SN+ "><td width=\"10\">" + m + "</td><td width=\"60\">" + SN + "</td><td width=\"60\">" + SD + "</td><td width=\"60\">" + LCA + "</td><td width=\"10\"><a href=\"javascript:void(0)\" class=\"am-icon-trash\" onclick=\"DelRow(this)\"></a></td></tr>";
-					$("#tablelist").append(table_html);
-				}
-			}else
-			{
-				alert("Package is ready. Please click \"Save\" botton");
-			}
-			$(this).val("");
+				val1[i] = $("#Scanned label:eq("+i+")").attr("id");
+				console.log(val1[i]);
+		};
+		$("#SNs").val(val1);
+        var val2 = document.getElementById("SR").value;
+		var val3 = document.getElementById("SW").value;
+		//var val4 = document.getElementById("BN").value;
+		var val4 = document.getElementById("SP").value;
+		var val5 = document.getElementById("Status").value;
+		var val6 = document.getElementById("Stage").value;
+		var val7 = document.getElementById("SNote").value;
+		if ( val1 == "" || val2 == "" || val3 == "" || val4 == "" || val5 == "" || val6 == "" )
+		{
+			alert("Something is empty!");
 			return false;
-		}
-	});
-
-    function DelRow(obj){
+		}else
+		{
+			$("#SN").val("");
+			return true;
+		};
+	};
+    
+	function DelRow(obj){
 		var ID = $(obj).parent().parent().attr("id");
 		$("#"+ID).remove();
-		var k = $("#tablelist>tr").length;
+		var k = $("#Scanned>label").length;
 		var i = 0;
 		for ( i = 0; i < k; i++ )
 		{
 			var j = i+1;
-			$("#tablelist tr:eq(" + i + ") td:first").text(j);
-
+			$("#Scanned label:eq(" + i + ") span:first").text(j);
 		};	
 	};
 	
-	function queryStage() {
-        var sn= document.getElementById("SN").value;
-        // alert(sn);
-        // $.getJSON("backend/chuli1.php",{SN:sn},function(json){
-        //     alert(json,'ok');
-        // })
-        $.ajax({
-
-            url:'backend/chuli2.php',
-            dataType:'text',
-            type:'GET',
-            data:{'SN':sn},
-            success: function(json){
-                if(jQuery.isEmptyObject(json)){document.getElementById("Stage").value=1;}
+	function query(SN) {
+		$.ajax({
+            url:		'backend/query_Stage_BN_SR_SW.php',
+            dataType:	'text',
+            type:		'POST',
+            data:		{'SN':SN},
+            success:	function(result){
+                if(jQuery.isEmptyObject(result)){document.getElementById("Stage").value=1;}
                 else{
-                    document.getElementById("Stage").value = json;}
+                    //document.getElementById("SNote").value=result;
+					var arr = result.split(";");
+					document.getElementById("SR").value=arr[0];
+					document.getElementById("SW").value=arr[1];
+					document.getElementById("BN").value=arr[2];
+					document.getElementById("Stage").value=arr[3];
+					}
             }
-        })
-
-
+        });
     }
+
+	function query12(){
+		$.ajax({
+			url:        'backend/query_Stage_BN_SR_SW.php',
+			dataType:   'text',
+	        type:       'POST',
+		    data:       {'NUM':'12'},
+			success:    function(result){
+				//document.getElementById("SNote").value=result;
+				var arr = result.split(";");
+				var arr1 = new Array()
+				for ( var i = 0; i < (arr.length-1) ; i++ )
+				{
+					arr1 = arr[i].split(",");
+					table_html = "<tr><td width=\"10%\">" + arr1[0] + "</td><td width=\"30%\">" + arr1[1] + "</td><td width=\"50%\">" + arr1[2] + "</td><td width=\"10%\">" + arr1[3] + "</td></tr>";
+					$("#tofill").append(table_html);
+				}
+			}		
+		});
+	}
 
 	function ChangePT(){
 		if($("#PT_NNVT").prop("checked"))
@@ -243,15 +215,39 @@
 			$("#NRecord").show();
 			$("#HRecord").hide();
 			n = 12;
-			$("#tablelist").html("");
+			$("#Scanned").html("");
 		}else
 		{
 			$("#NRecord").hide();
 			$("#HRecord").show();
 			n = 8;
-			$("#tablelist").html("");
+			$("#Scanned").html("");
 		};
 	}
+
+	$(document).ready(function(){query12()});
+
+	$("#SN").keydown(function(event){
+		if(event.keyCode==13)
+		{
+			var SN = $(this).val();
+			var	BN=$("#BN").val();
+			var m = $("#Scanned>label").length + 1;
+			if ( m < (n+1) )	
+			{
+				if ( $("#"+SN).length == 0 )
+				{
+					table_html ="<label id=\"" + SN + "\"><strong style=\"border:0.5px solid #C00000\">&nbsp;<span>" +  m + "</span>.&nbsp;" + SN + "&nbsp;--<span hidden>&nbsp;Batch&nbsp;" + BN + "</span>&nbsp;<span class=\"am-icon-close\" onclick=\"DelRow(this)\"></span>&nbsp;</strong>&nbsp;&nbsp;</label>";
+					$("#Scanned").append(table_html);
+				}				
+			}else
+			{
+				alert("Package is ready. Please click \"Save\" botton");
+			};
+			$(this).val("");
+			return false;
+		};
+	});
 </script>
 </body>
 </html>
